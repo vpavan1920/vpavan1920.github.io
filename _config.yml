@@ -8,7 +8,7 @@
 # Site Settings
 locale                   : "en-US"
 <<<<<<< HEAD
-title                    : "My new website"
+title                    : "Pavan Laxmipathy Veluvali"
 title_separator          : "-"
 name                     : &name "Pavan Laxmipathy Veluvali"
 description              : &description "personal description"
@@ -81,7 +81,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Pavan"
+  name             : "Pavan Laxmipathy"
   avatar           : "profile.png"
   bio              : "Computational Materials Scientist"
   location         : "Magdeburg, Germany"
