@@ -7,7 +7,6 @@
 
 # Site Settings
 locale                   : "en-US"
-<<<<<<< HEAD
 title                    : "Pavan Laxmipathy Veluvali"
 title_separator          : "-"
 name                     : &name "Pavan Laxmipathy Veluvali"
@@ -93,9 +92,6 @@ author:
   uri              :
   bitbucket        :
   codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
   foursquare       :
   #github           : "academicpages"
   google_plus      :
@@ -108,13 +104,6 @@ author:
   pinterest        :
   soundcloud       :
 #  stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            :
-  tumblr           :
- # twitter          : "replacethistwitterhandle"
-   vine             :
-  weibo            :
-  xing             :
-  youtube          :
   wikipedia        :
 
 
