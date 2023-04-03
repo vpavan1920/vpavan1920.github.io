@@ -15,5 +15,7 @@ main:
        
   - title: "News"
     url: /news/
-
+  
+  - title: "Contact"
+    url: /contact/
  
