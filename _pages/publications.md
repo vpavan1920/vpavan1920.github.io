@@ -5,12 +5,28 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
+## Under review and in preparation
+* **V. Pavan Laxmipathy**, Jan Heiland, Peter Benner. Design and Description of CSE workflows using FAIR principles: A framework for abstracting meta-data from FAIR computational experiments. *(in preparation)* 
 
-{% include base_path %}
+* **V. Pavan Laxmipathy**, A two-dimensional phase-field model on grain boundary grooving under the influence of grain boundary diffusion . *(in preparation)* 
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+* **V. Pavan Laxmipathy**, Fei Wang, Michael Selzer, and Britta Nestler. Effect of melt convection on the morphological evolution of polycrystalline thin films: Insights from three-dimensional phase-field simulations. *(under review)*. 
+
+
+## Accepted & Published 
+
+* **V. Pavan Laxmipathy**, Fei Wang, Michael Selzer, and Britta Nestler. Phase-field simulations of grain boundary grooving under diffusive-convective conditions. *Acta Materialia*, 2021.
+
+* **V. Pavan Laxmipathy**, Fei Wang, Michael Selzer, and Britta Nestler. A two-dimensional phase-field study on dendritic growth competition under convective conditions. *Computational Materials Science*, 2021.
+
+* **V. Pavan Laxmipathy**, Fei Wang, Michael Selzer, and Britta Nestler. A two-dimensional phase-field investigation on tip splitting microstructures. *Metals, MPDI Journal*, 2022.
+
+* **V. Pavan Laxmipathy**, Fei Wang, Michael Selzer, and Britta Nestler. Microstructural transition in monotectic alloys: A phase-field study. *International Journal of Heat and Mass Transfer*, 2020.
+
+* **V. Pavan Laxmipathy**, Fei Wang, Michael Selzer, Britta Nestler, and Kumar Ankit. Influence of melt convection on the morphological evolution of seaweed structures: Insights
+from phase-field simulations. **Computational Materials Science**, 2019.
+
+* A. Kneer, A. A. Gonzalez, **V. Pavan Laxmipathy**, P. Altschuh, E. Alesi, B. Nestler, Groundwater remediation - numerical models and experiments. *Hochschule Karlsruhe: Forschung aktuell*, pp. 59-63, 2018.
+
+[Google Scholar](https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=en)
+
