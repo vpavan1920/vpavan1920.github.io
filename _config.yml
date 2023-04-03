@@ -81,13 +81,15 @@ analytics:
 # Site Author
 author:
   name             : "Pavan Laxmipathy"
-  avatar           : "profile.png"
+  avatar           : "pavan_pic.jpeg"
   bio              : "Computational Materials Scientist"
   location         : "Magdeburg, Germany"
   employer         :
  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=de"
   email            :  "veluvali@mpi-magdeburg.mpg.de"
+  email2           :  "veluvali@mpi-magdeburg.mpg.de"
+ # email_2            :  "pavan1920@gmail.com"
   researchgate     : "https://www.researchgate.net/profile/V-Pavan-Laxmipathy"
   uri              :
   bitbucket        :
