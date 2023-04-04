@@ -8,6 +8,8 @@ author_profile: true
 
 
 ------------------
+
+**Email**: `pavan1920@gmail.com` and `veluvali@mpi-magdeburg.mpg.de`
 <address>
-Pavan Laxmipathy Veluvali <br /> Room 1.08 <br />  MPI-DCTS<br /> Sandtorstr. 1, 39106<br /> Germany
+Dr. Pavan Laxmipathy Veluvali <br /> Room 1.08 <br />  MPI-DCTS<br /> Sandtorstr. 1,<br /> 39106 Madeburg, <br /> Germany
 </address> 

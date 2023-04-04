@@ -5,6 +5,11 @@ permalink: /portfolio/
 author_profile: true
 ---
 
+
+## Computational workflows
+ 
+Numerical algorithms and associated meta-data are the backbone of simulations in engineering problems, where, practically, different methods are chained to design workflows. In this work we analyzes general and particular components and provides an abstract multi-layered description of CSE workflows: Each component will be characterized through an input/output description so that model, code, and data can be used interchangeably and, in the best case, redundantly. This research topic is part of an ongoing work and further updates will be shared here in the future. 
+
 ## Phase-field modeling 
 
 * ### Liquid grooving at grain boundaries
@@ -31,10 +36,6 @@ In this study, we investigated the prediction of inter-dendritic growth competit
 
 * ### Tip splitting seaweed microstructures
 One of the foci of my doctoral research was on tip splitting microstructures in energetically isotropic interfaces whereby the lack of interfacial anisotropy promotes an uninhibited, omnidirectional growth, and exhibits profuse irregular branching and splittings of an evolving solid-liquid interface. The simulated microstructures generally evolved towards an extremely complex interfacial pattern, and resemble a *seaweed*, *coral*, or other natural growth forms. This work has been published in two different articles, and can be accessed via [article 1](https://www.sciencedirect.com/science/article/abs/pii/S0927025619304951) & [article 2](https://www.mdpi.com/2075-4701/12/3/376)
-
-## Computational workflows
- 
-To be updated soon..
 
 
 
