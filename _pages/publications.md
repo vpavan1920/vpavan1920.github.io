@@ -6,9 +6,9 @@ author_profile: true
 ---
 
 ## Under review and in preparation
-* **V. Pavan Laxmipathy**, Jan Heiland, Peter Benner. Design and Description of CSE workflows using FAIR principles: A framework for abstracting meta-data from FAIR computational experiments. *(in preparation)* 
+* **Pavan L. Veluvali et al.**, Design and Description of CSE workflows using FAIR principles: A framework for abstracting meta-data from FAIR computational experiments. *(in preparation)* 
 
-* **V. Pavan Laxmipathy**, A two-dimensional phase-field model on grain boundary grooving under the influence of grain boundary diffusion . *(in preparation)* 
+* **V. Pavan Laxmipathy et al.**, A two-dimensional phase-field model on grain boundary grooving under the influence of grain boundary diffusion . *(in preparation)* 
 
 * **V. Pavan Laxmipathy**, Fei Wang, Michael Selzer, and Britta Nestler. Effect of melt convection on the morphological evolution of polycrystalline thin films: Insights from three-dimensional phase-field simulations. *(under review)*. 
 
