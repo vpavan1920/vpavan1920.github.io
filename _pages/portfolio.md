@@ -34,7 +34,7 @@ In this study, we investigated the prediction of inter-dendritic growth competit
 |:--:| 
 | *Inter-dendritic growth competition* |
 
-* ### Tip splitting seaweed microstructures
+* ### Tip splitting microstructures
 One of the foci of my doctoral research was on tip splitting microstructures in energetically isotropic interfaces whereby the lack of interfacial anisotropy promotes an uninhibited, omnidirectional growth, and exhibits profuse irregular branching and splittings of an evolving solid-liquid interface. The simulated microstructures generally evolved towards an extremely complex interfacial pattern, and resemble a *seaweed*, *coral*, or other natural growth forms. This work has been published in two different articles, and can be accessed via [article 1](https://www.sciencedirect.com/science/article/abs/pii/S0927025619304951) & [article 2](https://www.mdpi.com/2075-4701/12/3/376)
 
 | <br/><img src='/images/seaweed_micro2.png'> | 
