@@ -19,5 +19,6 @@ Currently, I'm a postdoctoral researcher at [Max Planck Institute for Dynamics o
 &nbsp;
 
 &nbsp;
-
-<img src="/images/wordcloud3.png" style="border-style: none"/>
+<p align="center">
+<img src="/images/wordcloud3.png" width = "75%" height = "75%" style="border-style: none"/>
+</p>
