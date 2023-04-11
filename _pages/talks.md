@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Talks and Poster presentations at conferences/Workshops"
+title: "Talks and Poster presentations at conferences/workshops"
 permalink: /talks/
 author_profile: true
 ---
