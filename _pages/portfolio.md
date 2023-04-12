@@ -12,6 +12,8 @@ Numerical algorithms and associated meta-data are the backbone of simulations in
 
 ## Phase-field modeling 
 
+Phase-field approach is a popular method of choice to model complex microstructures observed during solidification. The principal idea of any phase-field model is to characterize the phases using a non-conserved order parameter that varies smoothly across the diffuse interface. In general, the governing equation ensures that the interface profile evolves in order to minimize the free energy of the system with time, and it is then coupled to the diffusion field near the solid-liquid interface. Below are some research topics addressed through the phase-field approach
+
 * ### Liquid grooving at grain boundaries
 
 Grain boundaries (GB) are of considerable scientific and technological interest due to their significant influence on the final microstructural and material properties. Apart from initiating preferential diffusion pathways, and assisting void formation, the deepening of grain boundary grooves at multigrain junctions is widely suggested as the primary mechanism
