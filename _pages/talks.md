@@ -18,8 +18,8 @@ author_profile: true
 * *Invited talk* in the Department of Materials Science and Engineering,  Chair of Materials Science and Engineering for Metals,  Friedrich-Alexander-Universität Erlangen (FAU Erlangen), Germany, Dec 2021.
 
 ## 2018
-* *Poster presentation* at Baden-Württemberg Forschungstag BW-CAR , Stuttgart, Germany, June 2018 
-* *Oral presentation* in CDSM Symposium at TMS 2018 Conference, Arizona, USA, March 2018
+* *Poster presentation* at Baden-Württemberg Forschungstag BW-CAR , Stuttgart, Germany, June 2018. 
+* *Oral presentation* in CDSM Symposium at TMS 2018 Conference, Arizona, USA, March 2018.
 
 ## 2016    
 * *Summer School* on Phase-field models for the evolution of complex structures from 19/09/2016 to 30/09/2016 in Peyresq, France, September 2016.
