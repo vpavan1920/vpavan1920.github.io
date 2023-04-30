@@ -83,15 +83,16 @@
   }
 
   img {
-     width: 250px;
+   //  width: 350px;
+     //height: 350px;
      object-fit: contain;
-     //object-position: -5px 5%;
+//     object-position: 200% 50;
      //border: 5px solid red;
      border-radius: 20%;
 
      @include breakpoint($large) {
-     padding: 0.5px;
-     border: 0.2px solid $border-color;
+     padding: 0.1px;
+     border: 0.01px solid $border-color;
      }
  } 
 }

@@ -8,7 +8,7 @@ author_profile: true
 
 ## Computational workflows
  
-Numerical algorithms and associated meta-data are the backbone of simulations in engineering problems, where, practically, different methods are chained to design workflows. In this work we analyzes general and particular components and provides an abstract multi-layered description of CSE workflows: Each component will be characterized through an input/output description so that model, code, and data can be used interchangeably and, in the best case, redundantly. More to follow soon... 
+Numerical algorithms and associated meta-data are the backbone of simulations in engineering problems, where, practically, different methods are chained to design workflows. In this work we analyze general and particular components and provides an abstract multi-layered description of CSE workflows: Each component will be characterized through an input/output description so that model, code, and data can be used interchangeably and, in the best case, redundantly. More to follow soon... 
 
 ## Phase-field modeling 
 

@@ -28,5 +28,10 @@ from phase-field simulations. **Computational Materials Science**, 2019.
 
 * A. Kneer, A. A. Gonzalez, **V. Pavan Laxmipathy**, P. Altschuh, E. Alesi, B. Nestler, Groundwater remediation - numerical models and experiments. *Hochschule Karlsruhe: Forschung aktuell*, pp. 59-63, 2018.
 
+
+## PhD thesis
+* [Phase-field modeling of unidirectionally solidified microstructures under diffusive-convective regime](https://publikationen.bibliothek.kit.edu/1000134624)
+
+
 [Google Scholar](https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=en)
 

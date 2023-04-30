@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 ## 2023
-
+* Represented [MaRDI](https://www.mardi4nfdi.de) at [NFDI@MPG](https://indico3.mpi-magdeburg.mpg.de/event/31/) workshop at Schloss Ringberg, April 2023.
 * *Oral presentation* at SIAM conference on Computational Sciences and Engineering (SIAM CSE2023), Amsterdam, Netherlands, March 2023.
 * *Oral presentation* at RDM tools meet organised by NFDI4Cat, Feb 2023.
 
