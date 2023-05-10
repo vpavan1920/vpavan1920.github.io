@@ -16,9 +16,6 @@ My research career is focused on the investigation of phase-field models to addr
 
 Currently, I'm a postdoctoral researcher at [Max Planck Institute for Dynamics of Complex Technical Systems](https://www.mpi-magdeburg.mpg.de/) Magdeburg, and working on computational workflows in numerical mathematics.
 
-&nbsp;
-
-&nbsp;
 <p align="center">
-<img src="/images/wordcloud3.png" width = "75%" height = "75%" style="border-style: none"/>
+<img src="/images/wordcloud_new4.png" width = "100%" height = "100%" style="border-style: none"/>
 </p>

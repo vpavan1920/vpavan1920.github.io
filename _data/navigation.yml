@@ -13,6 +13,9 @@ main:
   - title: "CV"
     url: /cv/
        
+  - title: "Softwares"
+    url: /softwares/
+       
   - title: "News"
     url: /news/
   
