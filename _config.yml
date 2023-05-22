@@ -70,6 +70,8 @@ social:
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
+#remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+#minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Analytics
 analytics:
@@ -81,15 +83,13 @@ analytics:
 # Site Author
 author:
   name             : "Pavan Laxmipathy"
-  avatar           : "pavan_pic.jpeg"
+  avatar           : "pavan_pic3.jpeg"
   bio              : "Computational Materials Scientist"
   location         : "Magdeburg, Germany"
   employer         :
  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=de"
   email            :  "veluvali@mpi-magdeburg.mpg.de"
-  email2           :  "veluvali@mpi-magdeburg.mpg.de"
- # email_2            :  "pavan1920@gmail.com"
   researchgate     : "https://www.researchgate.net/profile/V-Pavan-Laxmipathy"
   uri              :
   bitbucket        :
@@ -102,7 +102,7 @@ author:
   #impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : "dr-v-pavan-laxmipathy-408946b7"
-  #orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0001-8804-0338"
   pinterest        :
   soundcloud       :
 #  stackoverflow    : # http://stackoverflow.com/users/123456/username
