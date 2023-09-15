@@ -20,7 +20,7 @@ author_profile: true
 ## Accepted & Published 
 *  *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **MaRDIFlow: A Workflow Framework for Documentation and Integration of FAIR Computational Experiments** | in 
 <span style="color: #800000">Proceedings of the Conference on Research Data Infrastructure</span>, 2023.
-
+[![doi.org/10.52825/cordi.v1i.323](https://zenodo.org/badge/DOI/10.52825/cordi.v1i.323.svg)](https://doi.org/10.52825/cordi.v1i.323)
 
 * *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*.**Phase-field simulations of grain boundary grooving under diffusive-convective conditions** | in 
 <span style="color: #800000">Acta Materialia</span>, 2021.\
@@ -48,7 +48,7 @@ author_profile: true
 
 * *A. Kneer, A. A. Gonzalez, V. Pavan Laxmipathy, P. Altschuh, E. Alesi, B. Nestler*. **Groundwater remediation - numerical models and experiments** | in 
 <span style="color: #800000">Hochschule Karlsruhe: Forschung Aktuell,  pp. 59-63</span>, 2018.\
-[![Generic badge](https://img.shields.io/badge/Download-Here-<COLOR>.svg)](https://www.h-ka.de/fileadmin/Hochschule_Karlsruhe_HKA/Bilder_VW-PK/Publikationen/Forschungsbericht/HKA_ZH_Forschung_aktuell_2018.pdf)
+[![Generic badge](https://img.shields.io/badge/Download-Here-brightgreen.svg)](https://www.h-ka.de/fileadmin/Hochschule_Karlsruhe_HKA/Bilder_VW-PK/Publikationen/Forschungsbericht/HKA_ZH_Forschung_aktuell_2018.pdf)
 
 ## PhD thesis
 * [Phase-field modeling of unidirectionally solidified microstructures under diffusive-convective regime](https://publikationen.bibliothek.kit.edu/1000134624)
