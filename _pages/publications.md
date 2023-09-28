@@ -6,7 +6,7 @@ author_profile: true
 ---
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4.svg?style=for-the-badge&logo=Google-Scholar&logoColor=white)](https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=en)
 
-## Under review and in preparation
+## Under Review and in Preparation
 * *Pavan L. Veluvali et al.*, **Design and Description of CSE workflows using FAIR principles: A framework for abstracting meta-data from FAIR computational experiments**.
 <span style="color: #800000">(to be submitted)</span> 
 
@@ -22,17 +22,17 @@ author_profile: true
 <span style="color: #800000">Proceedings of the Conference on Research Data Infrastructure</span>, 2023.
 [![doi.org/10.52825/cordi.v1i.323](https://zenodo.org/badge/DOI/10.52825/cordi.v1i.323.svg)](https://doi.org/10.52825/cordi.v1i.323)
 
-* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*.**Phase-field simulations of grain boundary grooving under diffusive-convective conditions** | in 
+* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **Phase-field simulations of grain boundary grooving under diffusive-convective conditions** | in 
 <span style="color: #800000">Acta Materialia</span>, 2021.\
 [![doi.org/10.1016/j.actamat.2020.116497](https://zenodo.org/badge/DOI/10.1016/j.actamat.2020.116497.svg)](https://doi.org/10.1016/j.actamat.2020.116497)
 
 
-* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*.**A two-dimensional phase-field study on dendritic growth competition under convective conditions** | in 
+* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **A two-dimensional phase-field study on dendritic growth competition under convective conditions** | in 
 <span style="color: #800000">Computational Materials Science</span>, 2021.\
 [![doi.org/10.1016/j.commatsci.2020.109964](https://zenodo.org/badge/DOI/10.1016/j.commatsci.2020.109964.svg)](https://doi.org/10.1016/j.commatsci.2020.109964)
 
 
-* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*.**A two-dimensional phase-field investigation on tip splitting microstructures** | in 
+* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **A two-dimensional phase-field investigation on tip splitting microstructures** | in 
 <span style="color: #800000">Metals, MDPI Journal</span>, 2022.\
 [![doi.org/10.3390/met12030376](https://zenodo.org/badge/DOI/10.3390/met12030376.svg)](https://doi.org/10.3390/met12030376)
 

@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Contributed/Invited Talks and Poster presentations at conferences/workshops"
+title: "Contributed/Invited Talks and Posters at Conferences/Workshops"
 permalink: /talks/
 author_profile: true
 header-includes: \usepackage{xcolor}
