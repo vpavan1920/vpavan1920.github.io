@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Talks and Poster presentations at conferences/workshops"
+title: "Contributed/Invited Talks and Poster presentations at conferences/workshops"
 permalink: /talks/
 author_profile: true
 header-includes: \usepackage{xcolor}
@@ -27,4 +27,4 @@ header-includes: \usepackage{xcolor}
 * *Oral presentation* in the <a href="https://www.tms.org/TMS2018/Programming/CDSM2018/TMS2018/Programming/CDSM_2018.aspx?hkey=33aa6ebb-b033-48e7-99a0-bc728bd1c570" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">CDSM Symposium</a> at <a href="https://www.tms.org/TMS2018/TMS2018/default.aspx" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">TMS 2018 Conference</a>, Arizona, USA, March 2018.
 
 ## 2016    
-* Attented *summer School* on <a href="https://pmc.polytechnique.fr/~mp/PFschool2016.html" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">Phase-field models for the evolution of complex structures</a> from 19/09/2016 to 30/09/2016 in Peyresq, France, September 2016.
+* Attented *summer School* on <a href="https://pmc.polytechnique.fr/~mp/PFschool2016.html" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">Phase-field models for the evolution of complex structures</a>, Peyresq, France, September 2016.
