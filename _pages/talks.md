@@ -7,7 +7,7 @@ header-includes: \usepackage{xcolor}
 ---
 
 ## 2023
-* *Oral presentation* at <a href="https://www.tu-ilmenau.de/dmv2023" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">German Association of Mathematicians (DMV) Annual Meeting 2023</a>, Illemnau, Germany, September 2023. 
+* *Oral presentation* at <a href="https://www.tu-ilmenau.de/dmv2023" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">German Association of Mathematicians (DMV) Annual Meeting 2023</a>, Ilemnau, Germany, September 2023. 
 * *Oral presentation* at the <a href="https://www.nfdi.de/cordi-2023/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">Conference on Research Data Infrastructure (CoRDI 2023)</a>, Karlsruhe, Germany, September 2023.
 * *Invited talk* at the <a href="https://www.mathc.rwth-aachen.de/en/home/home/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">Chair of Mathematics of Information Processing</a>, RWTH Aachen, Germany, September 2023. 
 * Represented <a href="https://www.mardi4nfdi.de/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">MaRDI</a> at <a href="https://indico3.mpi-magdeburg.mpg.de/event/31/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">NFDI@MPG</a> workshop at Schloss Ringberg, Germany, April 2023.
