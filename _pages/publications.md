@@ -8,7 +8,7 @@ author_profile: true
 
 ## Under Review and in Preparation
 * *Pavan L. Veluvali et al.*, **Design and Description of CSE workflows using FAIR principles: A framework for abstracting meta-data from FAIR computational experiments**.
-<span style="color: #800000">(to be submitted)</span> 
+<span style="color: #800000">(in review)</span> 
 
 * *V. Pavan Laxmipathy et al.*, **A two-dimensional phase-field model on grain boundary grooving under the influence of grain boundary diffusion**.
 <span style="color: #800000">(in preparation)</span> 
@@ -44,6 +44,11 @@ author_profile: true
 * *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, Britta Nestler, and Kumar Ankit*. **Influence of melt convection on the morphological evolution of seaweed structures: Insights from phase-field simulations** | in 
 <span style="color: #800000">Computational Materials Science</span>, 2019.\
 [![https://doi.org/10.1016/j.commatsci.2019.109196](https://zenodo.org/badge/DOI/10.1016/j.commatsci.2019.109196.svg)](https://doi.org/10.1016/j.commatsci.2019.109196)
+
+
+* *M.B.-Fabregat, I. Jubany, F. Travesa, P. Centrich, R. Centrich, E. J. Alesi, M. Esslinger, M. Alesi, G. Rehner, A. Kneer, A. A. Gonzalez, V. Pavan Laxmipathy, P. Altschuh, E. Alesi, B. Nestler*, **Groundwater Circulation Well Technology for Enhanced Natural Attenuation of TCE and PCE**. <span style="color: #800000">7th European Bioremediation Conference & 11th ISEB Conference, Chania, Greece</span>, 2018.
+[![Generic badge](https://img.shields.io/badge/Download-Here-brightgreen.svg)](https://www.hidronit.com/img/Abstract_Microbiome_ebc-vii-iseb2018.pdf
+)
 
 
 * *A. Kneer, A. A. Gonzalez, V. Pavan Laxmipathy, P. Altschuh, E. Alesi, B. Nestler*. **Groundwater remediation - numerical models and experiments** | in 

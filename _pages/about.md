@@ -10,7 +10,7 @@ redirect_from:
 About Me 
 ==========
 
-Hello! I'm Pavan Laxmipathy, a computational materials scientist with over 6 years of experience in the field of materials modeling.
+Hello! I'm Pavan Laxmipathy, a computational materials scientist with several years of experience in the field of materials modeling.
 
 My research career is centered around the investigation of phase-field models aimed at addressing the role of diffusive-convective regime on solidification microstructures, such as grain boundary grooves, dendritic, tip splitting and poly-phase microstructures in binary alloys. Throughout my academic journey, the development of simulation code and post-processing tools to model and analyze microstructure evolution has been my primary area of research during my doctoral and post-doctoral studies. I completed my PhD in early 2021 at the [Institute of Applied Materials - Computational Materials Science, Karlsruhe Institute of Technology](https://www.iam.kit.edu/mms/), under the supervision of [Prof. Dr. rer. nat. Britta Nestler](https://www.iam.kit.edu/mms/Mitarbeiter_nestler.php), and later continued as a postdoctoral researcher until March 2022. 
 
