@@ -46,7 +46,7 @@ author_profile: true
 [![https://doi.org/10.1016/j.commatsci.2019.109196](https://zenodo.org/badge/DOI/10.1016/j.commatsci.2019.109196.svg)](https://doi.org/10.1016/j.commatsci.2019.109196)
 
 
-* *M.B.-Fabregat, I. Jubany, F. Travesa, P. Centrich, R. Centrich, E. J. Alesi, M. Esslinger, M. Alesi, G. Rehner, A. Kneer, A. A. Gonzalez, V. Pavan Laxmipathy, P. Altschuh, E. Alesi, B. Nestler*, **Groundwater Circulation Well Technology for Enhanced Natural Attenuation of TCE and PCE**. <span style="color: #800000">7th European Bioremediation Conference & 11th ISEB Conference, Chania, Greece</span>, 2018.
+* *M.B.-Fabregat, I. Jubany, F. Travesa, P. Centrich, R. Centrich, E. J. Alesi, M. Esslinger, M. Alesi, G. Rehner, A. Kneer, A. A. Gonzalez, V. Pavan Laxmipathy, P. Altschuh, E. Alesi, B. Nestler*, **Groundwater Circulation Well Technology for Enhanced Natural Attenuation of TCE and PCE**. <span style="color: #800000">7th European Bioremediation Conference & 11th ISEB Conference, Chania, Greece</span>, 2018. \
 [![Generic badge](https://img.shields.io/badge/Download-Here-brightgreen.svg)](https://www.hidronit.com/img/Abstract_Microbiome_ebc-vii-iseb2018.pdf
 )
 
