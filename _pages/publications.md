@@ -7,8 +7,6 @@ author_profile: true
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4.svg?style=for-the-badge&logo=Google-Scholar&logoColor=white)](https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=en)
 
 ## Under Review and in Preparation
-* *Pavan L. Veluvali et al.*, **Design and Description of CSE workflows using FAIR principles: A framework for abstracting meta-data from FAIR computational experiments**.
-<span style="color: #800000">(in review)</span> 
 
 * *V. Pavan Laxmipathy et al.*, **A two-dimensional phase-field model on grain boundary grooving under the influence of grain boundary diffusion**.
 <span style="color: #800000">(in preparation)</span> 
@@ -18,6 +16,11 @@ author_profile: true
 
 
 ## Accepted & Published 
+
+*  *Pavan L. Veluvali, Jan Heiland, Peter Benner*, **MaRDIFlow: A CSE workflow framework for abstracting meta-data from FAIR computational experiments** | in 
+<span style="color: #800000">arXiv</span>, 2024.\
+[![arxiv.org/abs/2405.00028](https://zenodo.org/badge/DOI/arxiv.org/abs/2405.00028.svg)](https://arxiv.org/abs/2405.00028)
+
 *  *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **MaRDIFlow: A Workflow Framework for Documentation and Integration of FAIR Computational Experiments** | in 
 <span style="color: #800000">Proceedings of the Conference on Research Data Infrastructure</span>, 2023.
 [![doi.org/10.52825/cordi.v1i.323](https://zenodo.org/badge/DOI/10.52825/cordi.v1i.323.svg)](https://doi.org/10.52825/cordi.v1i.323)
