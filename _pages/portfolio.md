@@ -3,6 +3,7 @@ layout: archive
 title: "Research interests"
 permalink: /portfolio/
 author_profile: true
+keywords: "phase-field models, computational materials science, solidification microstructures"
 ---
 
 

@@ -4,6 +4,8 @@ title: "Contributed/Invited Talks and Posters at Conferences/Workshops"
 permalink: /talks/
 author_profile: true
 header-includes: \usepackage{xcolor}
+keywords: "phase-field models, computational materials science, solidification microstructures"
+
 ---
 
 ## 2023
