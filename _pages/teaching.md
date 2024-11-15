@@ -15,5 +15,5 @@ focused on the practical implementation of standard numerical algorithms. The co
 and algorithm development, with a focus on shell scripting, memory architecture, and management. 
 Key topics covered will include basic operations, formats, matrix norms, and solving linear systems, 
 offering hands-on experience in tackling these fundamental challenges.
-.
+
 ### More details such as lecture/reading materials can be found [here](https://www.mpi-magdeburg.mpg.de/scicomp2425)
