@@ -23,9 +23,8 @@ Since May 2022, I hold the position of a postdoctoral researcher at the [Max Pla
 
 📢 News
 ==========
+*   **[Oct 2024]** Scientific Computing - I (WiSe 24/25) course at [Otto-von-Guericke-Universität Magdeburg](https://www.ovgu.de/), see [Teaching](https://vpavan1920.github.io/teaching) for more details
 
-*    **[May 2024]** Pleased to announce our latest research paper on [arXiv](http://arxiv.org/abs/2405.00028). Dive into our findings on computational workflows in mathematical sciences now!
+*   **[May 2024]** Pleased to announce our latest research paper on [arXiv](http://arxiv.org/abs/2405.00028). Dive into our findings on computational workflows in mathematical sciences now!
 
 *   **[September 2023]** Invited talk at the [Chair of Mathematics of Information Processing](https://www.mathc.rwth-aachen.de/en/home/home/), RWTH Aachen, Germany. 
-
-*   **[August 2023]** Abstract accepted in Conference for Research Data Insfrastructure 2023. *MaRDIFlow: A Workflow Framework for Documentation and Integration of FAIR Computational Experiments*. 

@@ -9,10 +9,10 @@ keywords: "phase-field models, computational materials science, solidification m
 
 ## Under Review and in Preparation
 
-* *V. Pavan Laxmipathy et al.*, **A two-dimensional phase-field model on grain boundary grooving under the influence of grain boundary diffusion**.
-<span style="color: #800000">(to be submitted)</span> 
+* *V. Pavan Laxmipathy et al.*, **Role of interfacial surface anisotropy on liquid grooving at grain boundaries: A phase-field study**.
+<span style="color: #800000">(in review)</span> 
 
-* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **Effect of melt convection on the morphological evolution of polycrystalline thin films: Insights from three-dimensional phase-field simulations**. 
+* *V. Pavan Laxmipathy et al.*, **Effect of melt convection on the morphological evolution of polycrystalline thin films: Insights from three-dimensional phase-field simulations**. 
 <span style="color: #800000">(in review)</span>
 
 
