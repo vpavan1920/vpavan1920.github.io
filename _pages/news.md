@@ -1,4 +1,5 @@
 ---
+layout: archive
 permalink: /news/
 title: ""
 author_profile: true
