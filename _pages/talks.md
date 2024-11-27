@@ -8,7 +8,7 @@ keywords: "phase-field models, computational materials science, solidification m
 
 ---
 ## 2024
-* *Oral presentation* at <a href="https://www.tu-ilmenau.de/dmv2023" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">2nd MaRDI Workshop on Scientific Computing</a>, Magdeburg, Germany, October 2024.
+* *Oral presentation* at <a href="https://indico3.mpi-magdeburg.mpg.de/event/42/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">2nd MaRDI Workshop on Scientific Computing</a>, Magdeburg, Germany, October 2024.
 
 ## 2023
 * *Oral presentation* at <a href="https://www.tu-ilmenau.de/dmv2023" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">German Association of Mathematicians (DMV) Annual Meeting 2023</a>, Ilemnau, Germany, September 2023. 
