@@ -463,6 +463,26 @@ body.dark-theme .greedy-nav button:hover {
   background-color: #0056b3;
 }
 
+/* Navigation list in dark theme */
+body.dark-theme .nav__list {
+  background-color: #121212;
+  color: #f0f0f0;
+}
 
+body.dark-theme .nav__list a {
+  color: #f0f0f0;
+}
 
+body.dark-theme .nav__list a:hover {
+  color: #007bff;
+}
 
+body.dark-theme .nav__list .active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+body.dark-theme .nav__title {
+  background-color: #007bff;
+  color: #fff;
+}
