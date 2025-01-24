@@ -313,3 +313,57 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
+
+/* Default Light Theme */
+body {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+  
+/* Position the toggle button in the top-right corner */
+#theme-toggle {
+  position: fixed;         /* Fix it to the screen */
+  top: 25px;               /* Distance from the top of the page */
+  right: 550px;             /* Distance from the right of the page */
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1.25em;
+  cursor: pointer;
+  z-index: 9999;           /* Ensure the button is on top of other content */
+}
+
+#theme-toggle:hover {
+  color: #007bff;          /* Change color on hover */
+}
+
+.theme-toggle-container {
+  z-index: 9999;           /* Ensure container is on top of other content */
+}
+
+/* Default styles (Light theme) */
+.email-link {
+  color: #000; /* Black color for light theme */
+  text-decoration: none;
+}
+
+.email-link i {
+  color: #007bff; /* Icon color for light theme */
+}
+
+/* Dark theme overrides */
+body.dark-theme .email-link {
+  color: #f0f0f0; /* Light color for text in dark theme */
+}
+
+body.dark-theme .email-link i {
+  color: #f0f0f0; /* White icon in dark theme */
+}
+

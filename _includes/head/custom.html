@@ -41,4 +41,42 @@
   </style>
 
 
+<div class="theme-toggle-container">
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fa fa-moon"></i>
+  </button>
+</div>
+
+
+
+<script>
+  // Check if there's a saved theme preference in localStorage
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'dark') {
+    document.body.classList.add('dark-theme');
+  }
+
+  // Select the button and add event listener
+  const themeToggleButton = document.getElementById('theme-toggle');
+  themeToggleButton.addEventListener('click', () => {
+    // Toggle the dark-theme class on body
+    document.body.classList.toggle('dark-theme');
+
+    // Save the theme preference in localStorage
+    if (document.body.classList.contains('dark-theme')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+
+  // Optional: Automatically apply system theme preference
+  // const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  // if (mediaQuery.matches) {
+  //   document.body.classList.add('dark-theme');
+  //   localStorage.setItem('theme', 'dark'); // Save system preference (optional)
+  // }
+</script>
+
+
 <!-- end custom head snippets -->

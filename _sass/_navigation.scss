@@ -430,3 +430,39 @@
     }
   }
 }
+
+/* ==========================================================================
+   DARK THEME NAVIGATION STYLES
+   ========================================================================== */
+
+/* Breadcrumbs in dark theme */
+body.dark-theme .breadcrumbs {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+/* Greedy navigation in dark theme */
+body.dark-theme .greedy-nav {
+  background-color: #121212;
+}
+
+body.dark-theme .greedy-nav a {
+  color: #f0f0f0;
+}
+
+body.dark-theme .greedy-nav a:hover {
+  color: #007bff;
+}
+
+body.dark-theme .greedy-nav button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+body.dark-theme .greedy-nav button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
