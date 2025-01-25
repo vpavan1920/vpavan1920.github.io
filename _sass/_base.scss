@@ -318,7 +318,7 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
 body {
   background-color: #fff;
   color: #333;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Dark Theme Styles */
@@ -330,8 +330,8 @@ body.dark-theme {
 /* Position the toggle button in the top-right corner */
 #theme-toggle {
   position: absolute;         /* Fix it to the screen */
-  top: 25px;               /* Distance from the top of the page */
-  right: 10vw;             /* Distance from the left of the page */
+  top: 24px;               /* Distance from the top of the page */
+  right: 15vw;             /* Distance from the left of the page */
   background-color: transparent;
   border: none;
   color: inherit;
@@ -373,10 +373,7 @@ body.dark-theme {
   color: white;
 }
 
-button#theme-toggle {
-  transition: color 0.3s ease;
-}
-
 button#theme-toggle:hover {
   color: #ff9800; /* Change color on hover */
 }
+

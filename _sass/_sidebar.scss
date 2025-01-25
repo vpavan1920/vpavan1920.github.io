@@ -89,6 +89,7 @@
      object-position: -70px -200px;
      //border: 5px solid red;
      border-radius: 12.5%;
+     height: auto;
 
      @include breakpoint($large) {
      padding: 0.1px;
