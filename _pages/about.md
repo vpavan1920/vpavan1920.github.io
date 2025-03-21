@@ -13,9 +13,18 @@ About Me
 
 Hello! I'm Pavan Laxmipathy, a computational materials scientist with several years of experience in the field of materials modeling.
 
-My research career is centered around the investigation of phase-field models aimed at addressing the role of diffusive-convective regime on solidification microstructures, such as grain boundary grooves, dendritic, tip splitting and poly-phase microstructures in binary alloys. I completed my PhD in early 2021 at the [Institute of Applied Materials - Computational Materials Science, Karlsruhe Institute of Technology](https://www.iam.kit.edu/mms/), under the supervision of [Prof. Dr. rer. nat. Britta Nestler](https://www.iam.kit.edu/mms/Mitarbeiter_nestler.php), and later continued as a postdoctoral researcher until March 2022. Throughout my academic career, I have expanded my expertise to include the emerging fields of alloy solidification,  electrochemistry, thin-film coatings, multiphase flows, and additive manufacturing.
+My research career is centered around the investigation of phase-field models aimed at addressing the role of diffusive-convective regime on 
+solidification microstructures, such as grain boundary grooves, dendritic, tip splitting and poly-phase microstructures in binary alloys. 
+I completed my PhD in early 2021 at the [Institute of Applied Materials - Computational Materials Science, Karlsruhe Institute of Technology](https://www.iam.kit.edu/mms/),
+ under the supervision of [Prof. Dr. rer. nat. Britta Nestler](https://www.iam.kit.edu/mms/Mitarbeiter_nestler.php), 
+ and later continued as a postdoctoral researcher until March 2022. Throughout my academic career, I have expanded 
+ my expertise to include the emerging fields of alloy solidification,  electrochemistry, thin-film coatings, multiphase flows, and additive manufacturing.
 
-Since May 2022, I hold the position of a postdoctoral researcher at the [Max Planck Institute for Dynamics of Complex Technical Systems](https://www.mpi-magdeburg.mpg.de/), Magdeburg, and I am a member of [Prof. Dr. Peter Benner's](https://www.mpi-magdeburg.mpg.de/person/26532/16319) group, focused on [Computational Methods in Systems and Control Theory](https://www.mpi-magdeburg.mpg.de/csc). My work is dedicated to the advancement of computational workflows, seamlessly integrating the domains of numerical mathematics and materials science. 
+Since May 2022, I hold the position of a postdoctoral researcher at the 
+[Max Planck Institute for Dynamics of Complex Technical Systems](https://www.mpi-magdeburg.mpg.de/), Magdeburg, 
+and I am a member of [Prof. Dr. Peter Benner's](https://www.mpi-magdeburg.mpg.de/person/26532/16319) group, focused on 
+[Computational Methods in Systems and Control Theory](https://www.mpi-magdeburg.mpg.de/csc). My work is dedicated to the 
+advancement of computational workflows, seamlessly integrating the domains of numerical mathematics and materials science. 
 
 | <br/><img src="/images/wordcloud_new6.png" width = "100%" height = "100%" style="border-style: none"/> | 
 |:--:| 
@@ -24,8 +33,8 @@ Since May 2022, I hold the position of a postdoctoral researcher at the [Max Pla
 
 📢 News
 ==========
+*   **[Mar 2025]** New full-length research paper published in [Journal of Applied Physics](https://doi.org/10.1063/5.0260488). Happy to share our latest findings on grain boundary grooving and the role of interfacial surface anisotropy. 
+
 *   **[Oct 2024]** Scientific Computing - I (WiSe 24/25) course at [Otto-von-Guericke-Universität Magdeburg](https://www.ovgu.de/), see [Teaching](https://vpavan1920.github.io/teaching) for more details
 
 *   **[May 2024]** Pleased to announce our latest research paper on [arXiv](http://arxiv.org/abs/2405.00028). Dive into our findings on computational workflows in mathematical sciences now!
-
-*   **[September 2023]** Invited talk at the [Chair of Mathematics of Information Processing](https://www.mathc.rwth-aachen.de/en/home/home/), RWTH Aachen, Germany. 
