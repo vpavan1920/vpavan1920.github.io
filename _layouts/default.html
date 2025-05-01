@@ -18,7 +18,29 @@ layout: compress
      }
   </style>
   
+  <script>
+    fetch('https://ipinfo.io/json?token=00370b5b10d683')
+      .then(response => response.json())
+      .then(data => {
+        const visitorData = {
+          ip: data.ip,
+          country: data.country,
+          city: data.city
+        };
   
+        fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(visitorData)
+        });
+      })
+      .catch(error => console.error('Error fetching visitor info:', error));
+  </script>
+
+
   <body>
 
     {% include browser-upgrade.html %}
