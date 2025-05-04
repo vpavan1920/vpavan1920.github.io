@@ -25,9 +25,11 @@ layout: compress
         const visitorData = {
           ip: data.ip,
           country: data.country_name,
-          city: data.city
+          city: data.city,
+          userAgent: navigator.userAgent,
+          referrer: document.referrer,
+          page: window.location.pathname 
         };
-  
         fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
           method: 'POST',
           mode: 'no-cors',
@@ -39,7 +41,6 @@ layout: compress
       })
       .catch(error => console.error('Error fetching visitor info:', error));
   </script>
-  
 
 
   <body>
