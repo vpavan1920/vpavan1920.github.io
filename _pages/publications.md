@@ -18,6 +18,11 @@ keywords: "phase-field models, computational materials science, solidification m
 
 ## Accepted & Published 
 
+*Pavan L. Veluvali, Jan Heiland, Peter Benner*. **Bridging Ontologies and Computational Workflows: A Framework for Semantic Enrichment and Reproducibility** | in 
+<span style="color: #800000"> the Conference on Research Data Infrastructure</span>, 2023.
+[![https://doi.org/10.5281/zenodo.16735880](https://zenodo.org/badge/DOI/10.5281/zenodo.16735880.svg)](https://doi.org/10.5281/zenodo.16735880)
+
+
 * *M. Umar, V. Pavan Laxmipathy, B. Nestler et al.*, **Role of interfacial surface anisotropy on liquid grooving at grain boundaries: A phase-field study** | in
 <span style="color: #800000">Journal of Applied Physics</span>, 2025.  
 [![doi.org/10.1016/j.actamat.2020.116497](https://zenodo.org/badge/DOI/doi.org/10.1063/5.0260488.svg)](https://doi.org/10.1063/5.0260488)
