@@ -9,7 +9,7 @@ keywords: "phase-field models, computational materials science, solidification m
 ---
 
 ## 2025
-*Oral presentation* at the <a href="https://www.nfdi.de/cordi-2025/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">Conference on Research Data Infrastructure (CoRDI 2025)</a>, Aachen, Germany, August 2025.
+*   *Oral presentation* at the <a href="https://www.nfdi.de/cordi-2025/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">Conference on Research Data Infrastructure (CoRDI 2025)</a>, Aachen, Germany, August 2025.
 
 ## 2024
 * *Oral presentation* at <a href="https://indico3.mpi-magdeburg.mpg.de/event/42/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">2nd MaRDI Workshop on Scientific Computing</a>, Magdeburg, Germany, October 2024.
