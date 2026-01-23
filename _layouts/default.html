@@ -33,66 +33,60 @@
     const userAgent = navigator.userAgent;
     const referrer = document.referrer || "Direct";
 
-    // 1. Immediate Filtering
-    const isBrokenPath = path.includes('{{') || path.includes('%7B') || path.includes('_includes');
-    const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(userAgent);
-    if (isBrokenPath || isBot) return;
+    if (path.includes('{{') || /bot|googlebot|crawler/i.test(userAgent)) return;
 
-    // 2. Main Logger Function
-    function sendData(visitorData) {
+    function sendToSheets(data) {
       fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
         method: 'POST',
-        mode: 'no-cors', 
+        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(visitorData)
+        body: JSON.stringify(data)
       });
     }
 
-    // 3. Try primary IP API (ipapi.co)
-    fetch('https://ipapi.co/json/')
-      .then(response => {
-        if (!response.ok) throw new Error('Primary API Limit');
-        return response.json();
-      })
-      .then(data => {
-        // Filter Anon Singapore
-        if (data.country_code === "SG" && referrer === "Direct") return;
+    // Check if we already have the IP for this session
+    const cachedIP = sessionStorage.getItem('visitor_ip');
+    const cachedGeo = sessionStorage.getItem('visitor_geo');
 
-        sendData({
-          ip: data.ip,
-          country: data.country_name,
-          city: data.city,
-          userAgent: userAgent,
-          referrer: referrer,
-          page: path
-        });
-      })
-      .catch(() => {
-        // 4. BACKUP API: Try ip-api.com if primary fails
-        fetch('http://ip-api.com/json/')
-          .then(res => res.json())
-          .then(data => {
-            sendData({
-              ip: data.query,
-              country: data.country,
-              city: data.city,
-              userAgent: userAgent,
-              referrer: referrer,
-              page: path
-            });
-          })
-          .catch(() => {
-            // 5. LAST RESORT: Log without IP info
-            sendData({
-              ip: "Limit Reached",
-              country: "Unknown",
-              city: "Unknown",
-              userAgent: userAgent,
-              referrer: referrer,
-              page: path
-            });
-          });
+    if (cachedIP) {
+      // Use cached data to save API hits
+      sendToSheets({
+        ip: cachedIP,
+        country: cachedGeo || "Cached",
+        city: "Cached",
+        userAgent: userAgent,
+        referrer: referrer,
+        page: path
       });
+    } else {
+      // No cache, fetch from API
+      fetch('https://ipapi.co/json/')
+        .then(res => res.json())
+        .then(data => {
+          sessionStorage.setItem('visitor_ip', data.ip);
+          sessionStorage.setItem('visitor_geo', data.country_name);
+          
+          sendToSheets({
+            ip: data.ip,
+            country: data.country_name,
+            city: data.city,
+            userAgent: userAgent,
+            referrer: referrer,
+            page: path
+          });
+        })
+        .catch(() => {
+          // Fallback if API is still blocked/limited
+          sendToSheets({
+            ip: "Limit Reached",
+            country: "Unknown",
+            city: "Unknown",
+            userAgent: userAgent,
+            referrer: referrer,
+            page: path
+          });
+        });
+    }
   })();
   {% endraw %}
 </script>
