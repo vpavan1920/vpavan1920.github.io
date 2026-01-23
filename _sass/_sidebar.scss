@@ -14,7 +14,7 @@
   margin-bottom: 1em;
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    @include span(2.5 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -68,34 +68,39 @@
 /*
    Author profile and links
    ========================================================================== */
-
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  // set width only, for non-square avatars
-  // height: 36px;
+  width: 72px;
+  overflow: hidden; /* Crucial: crops the "zoom" so it stays in the box */
+  border-radius: 12.5%;
 
   @include breakpoint($large) {
     display: block;
-    width: auto;
-    height: auto;
+    width: 100%;
   }
 
-  img {
-    // width: 550px;
-     //height: 350px;
-     object-fit: none;
-     object-position: -70px -200px;
-     //border: 5px solid red;
-     border-radius: 12.5%;
-     height: auto;
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    /* 1. Zoom Level */
+    transform: scale(1.2); 
 
-     @include breakpoint($large) {
-     padding: 0.1px;
-     border: 0.01px solid $border-color;
-     }
- } 
+    /* 2. POSITIONING:
+       First value (25%) = Horizontal (Left/Right)
+       Second value (20%) = Vertical (Up/Down)
+       
+       To move the image FURTHER DOWN: Decrease the second % (e.g., 10% or 0%)
+       To move the image UP: Increase the second % (e.g., 40% or 60%)
+    */
+    transform-origin: 35% 5%; 
+
+    @include breakpoint($large) {
+      border: 1px solid $border-color;
+    }
+  }
 }
 
 .author__content {
