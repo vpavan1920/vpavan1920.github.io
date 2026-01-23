@@ -1,15 +1,13 @@
 ---
 layout: compress
 ---
-
 {% include base_path %}
-
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
 <head>
   {% include head.html %}
   {% include head/custom.html %}
-  <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -23,71 +21,62 @@ layout: compress
         "https://orcid.org/0000-0001-8804-0338"
       ]
     }
-  </script>
-
-  <style>
-    div {
-      text-align: justify;
-      text-justify: inter-word;
-    }
-  </style>
-
-  <script>
-    /* Tell Jekyll to ignore this section */
+</script>
+<style>
+  div {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+</style>
+<script>
   {% raw %}
-    fetch('https://ipapi.co/json/')
-      .then(response => response.json())
-      .then(data => {
-        const path = window.location.pathname;
-        const userAgent = navigator.userAgent;
-        const referrer = document.referrer;
+  fetch('https://ipapi.co/json/')
+    .then(response => response.json())
+    .then(data => {
+      const path = window.location.pathname;
+      const userAgent = navigator.userAgent;
+      const referrer = document.referrer;
 
-        const isBrokenPath = path.includes('{{') || path.includes('%7B') || path.includes('_includes');
-        
-        const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(userAgent);
-        
-        const isAnonSingapore = (data.country_code === "SG" || data.country_name === "Singapore") && !referrer;
+      // Filtering logic
+      const isBrokenPath = path.includes('{{') || path.includes('%7B') || path.includes('_includes');
+      const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(userAgent);
+      const isAnonSingapore = (data.country_code === "SG" || data.country_name === "Singapore") && !referrer;
 
-        if (isBrokenPath || isBot || isAnonSingapore) {
-          console.log('Tracking skipped for automated or invalid request.');
-          return; 
-        }
-        const visitorData = {
-          ip: data.ip,
-          country: data.country_name,
-          city: data.city,
-          userAgent: userAgent,
-          referrer: referrer || "Direct",
-          page: path,
-          screenRes: window.screen.width + "x" + window.screen.height, // Ensure these match your appendRow
-          language: navigator.language
-        };
+      if (isBrokenPath || isBot || isAnonSingapore) {
+        console.log('Tracking skipped for automated or invalid request.');
+        return; 
+      }
 
-        fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(visitorData)
-        });
-      })
-      .catch(error => console.error('Error fetching visitor info:', error));
+      const visitorData = {
+        ip: data.ip,
+        country: data.country_name,
+        city: data.city,
+        userAgent: userAgent,
+        referrer: referrer || "Direct",
+        page: path
+      };
+
+      fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(visitorData)
+      });
+    })
+    .catch(error => console.error('Error fetching visitor info:', error));
   {% endraw %}
-  </script>
+</script>
 </head>
-
 <body>
   {% include browser-upgrade.html %}
   {% include masthead.html %}
-
   {{ content }}
-
-  <div class="page__footer">
-    <footer>
+<div class="page__footer">
+<footer>
       {% include footer/custom.html %}
       {% include footer.html %}
-    </footer>
-  </div>
-
+</footer>
+</div>
   {% include scripts.html %}
 </body>
 </html>
