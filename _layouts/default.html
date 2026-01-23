@@ -33,6 +33,8 @@ layout: compress
   </style>
 
   <script>
+    /* Tell Jekyll to ignore this section */
+    {% raw %}
     fetch('https://ipapi.co/json/')
       .then(response => response.json())
       .then(data => {
@@ -40,8 +42,6 @@ layout: compress
         const userAgent = navigator.userAgent;
         const referrer = document.referrer;
 
-        // --- BOT & ERROR FILTERS ---
-        
         // 1. Filter out broken Liquid tags or internal _includes directory hits
         const isBrokenPath = path.includes('{{') || path.includes('%7B') || path.includes('_includes');
         
@@ -56,7 +56,6 @@ layout: compress
           return; 
         }
 
-        // --- DATA PREPARATION ---
         const visitorData = {
           ip: data.ip,
           country: data.country_name,
@@ -66,17 +65,15 @@ layout: compress
           page: path 
         };
 
-        // --- SEND TO GOOGLE SHEETS ---
         fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
           method: 'POST',
           mode: 'no-cors',
-          headers: {
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(visitorData)
         });
       })
       .catch(error => console.error('Error fetching visitor info:', error));
+    {% endraw %}
   </script>
 </head>
 
