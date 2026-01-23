@@ -6,46 +6,67 @@ layout: compress
 
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "{{ site.author.name }}",
-  "alternateName": ["Pavan laxmipathy", "Pavan Laxmipathi", "Veluvali L. Pavan"],
-  "url": "{{ site.url }}",
-  "sameAs": [
-  "https://www.linkedin.com/in/dr-v-pavan-laxmipathy-408946b7/",
-  "https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=de",
-  "https://www.researchgate.net/profile/V-Pavan-Laxmipathy",
-  "https://orcid.org/0000-0001-8804-0338"
-]
-}
-</script>
-
-  </head>
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.author.name }}",
+      "alternateName": ["Pavan laxmipathy", "Pavan Laxmipathi", "Veluvali L. Pavan"],
+      "url": "{{ site.url }}",
+      "sameAs": [
+        "https://www.linkedin.com/in/dr-v-pavan-laxmipathy-408946b7/",
+        "https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=de",
+        "https://www.researchgate.net/profile/V-Pavan-Laxmipathy",
+        "https://orcid.org/0000-0001-8804-0338"
+      ]
+    }
+  </script>
 
   <style>
-     div {
-     text-align: justify;
-     text-justify: inter-word;
-     }
+    div {
+      text-align: justify;
+      text-justify: inter-word;
+    }
   </style>
-  
+
   <script>
     fetch('https://ipapi.co/json/')
       .then(response => response.json())
       .then(data => {
+        const path = window.location.pathname;
+        const userAgent = navigator.userAgent;
+        const referrer = document.referrer;
+
+        // --- BOT & ERROR FILTERS ---
+        
+        // 1. Filter out broken Liquid tags or internal _includes directory hits
+        const isBrokenPath = path.includes('{{') || path.includes('%7B') || path.includes('_includes');
+        
+        // 2. Filter out known automated crawlers
+        const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(userAgent);
+        
+        // 3. Filter out the specific empty "Singapore" hits (No referrer + Singapore)
+        const isAnonSingapore = (data.country_code === "SG" || data.country_name === "Singapore") && !referrer;
+
+        if (isBrokenPath || isBot || isAnonSingapore) {
+          console.log('Tracking skipped for automated or invalid request.');
+          return; 
+        }
+
+        // --- DATA PREPARATION ---
         const visitorData = {
           ip: data.ip,
           country: data.country_name,
           city: data.city,
-          userAgent: navigator.userAgent,
-          referrer: document.referrer,
-          page: window.location.pathname 
+          userAgent: userAgent,
+          referrer: referrer || "Direct",
+          page: path 
         };
+
+        // --- SEND TO GOOGLE SHEETS ---
         fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
           method: 'POST',
           mode: 'no-cors',
@@ -57,23 +78,21 @@ layout: compress
       })
       .catch(error => console.error('Error fetching visitor info:', error));
   </script>
+</head>
 
+<body>
+  {% include browser-upgrade.html %}
+  {% include masthead.html %}
 
-  <body>
+  {{ content }}
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+  <div class="page__footer">
+    <footer>
+      {% include footer/custom.html %}
+      {% include footer.html %}
+    </footer>
+  </div>
 
-    {{ content }}
-
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
-
-    {% include scripts.html %}
-
-  </body>
+  {% include scripts.html %}
+</body>
 </html>
