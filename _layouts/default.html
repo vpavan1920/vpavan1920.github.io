@@ -31,45 +31,14 @@
   (function() {
     const path = window.location.pathname;
     const userAgent = navigator.userAgent;
-    const referrer = document.referrer;
+    const referrer = document.referrer || "Direct";
 
-    // 1. Immediate Filtering (Bots & Broken Paths)
+    // 1. Immediate Filtering
     const isBrokenPath = path.includes('{{') || path.includes('%7B') || path.includes('_includes');
     const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(userAgent);
     if (isBrokenPath || isBot) return;
 
-    // 2. Fetch IP with Fallback
-    fetch('https://api.ipify.org?format=json')
-      .then(response => {
-        if (!response.ok) throw new Error('Status ' + response.status); // Trigger catch if 429
-        return response.json();
-      })
-      .then(data => {
-        // Filter Anon Singapore only if data is successful
-        if ((data.country_code === "SG") && !referrer) return;
-
-        sendData({
-          ip: data.ip,
-          country: data.country_name,
-          city: data.city,
-          userAgent: userAgent,
-          referrer: referrer || "Direct",
-          page: path
-        });
-      })
-      .catch(error => {
-        console.warn('IP API Limit Reached or Blocked. Logging basic info only.');
-        // FALLBACK: Send data even if IP lookup fails
-        sendData({
-          ip: "Rate Limited (429)",
-          country: "Unknown",
-          city: "Unknown",
-          userAgent: userAgent,
-          referrer: referrer || "Direct",
-          page: path
-        });
-      });
-
+    // 2. Main Logger Function
     function sendData(visitorData) {
       fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
         method: 'POST',
@@ -78,6 +47,52 @@
         body: JSON.stringify(visitorData)
       });
     }
+
+    // 3. Try primary IP API (ipapi.co)
+    fetch('https://ipapi.co/json/')
+      .then(response => {
+        if (!response.ok) throw new Error('Primary API Limit');
+        return response.json();
+      })
+      .then(data => {
+        // Filter Anon Singapore
+        if (data.country_code === "SG" && referrer === "Direct") return;
+
+        sendData({
+          ip: data.ip,
+          country: data.country_name,
+          city: data.city,
+          userAgent: userAgent,
+          referrer: referrer,
+          page: path
+        });
+      })
+      .catch(() => {
+        // 4. BACKUP API: Try ip-api.com if primary fails
+        fetch('http://ip-api.com/json/')
+          .then(res => res.json())
+          .then(data => {
+            sendData({
+              ip: data.query,
+              country: data.country,
+              city: data.city,
+              userAgent: userAgent,
+              referrer: referrer,
+              page: path
+            });
+          })
+          .catch(() => {
+            // 5. LAST RESORT: Log without IP info
+            sendData({
+              ip: "Limit Reached",
+              country: "Unknown",
+              city: "Unknown",
+              userAgent: userAgent,
+              referrer: referrer,
+              page: path
+            });
+          });
+      });
   })();
   {% endraw %}
 </script>
