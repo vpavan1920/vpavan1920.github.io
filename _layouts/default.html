@@ -42,13 +42,10 @@ layout: compress
         const userAgent = navigator.userAgent;
         const referrer = document.referrer;
 
-        // 1. Filter out broken Liquid tags or internal _includes directory hits
         const isBrokenPath = path.includes('{{') || path.includes('%7B') || path.includes('_includes');
         
-        // 2. Filter out known automated crawlers
         const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(userAgent);
         
-        // 3. Filter out the specific empty "Singapore" hits (No referrer + Singapore)
         const isAnonSingapore = (data.country_code === "SG" || data.country_name === "Singapore") && !referrer;
 
         if (isBrokenPath || isBot || isAnonSingapore) {
