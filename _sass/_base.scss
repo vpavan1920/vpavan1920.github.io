@@ -377,3 +377,35 @@ button#theme-toggle:hover {
   color: #ff9800; /* Change color on hover */
 }
 
+/* Mobile Navigation Dark Theme Fix */
+body.dark-theme .greedy-nav {
+  background-color: #121212; /* Match your dark theme background */
+}
+
+body.dark-theme .greedy-nav .visible-links a {
+  color: white;
+}
+
+/* This targets the actual dropdown menu (the "burger" contents) */
+body.dark-theme .greedy-nav .hidden-links {
+  background-color: #1d1d1d; /* Slightly lighter dark for contrast */
+  border: 1px solid #444;
+}
+
+body.dark-theme .greedy-nav .hidden-links a {
+  color: white !important;
+  background-color: #1d1d1d;
+}
+
+body.dark-theme .greedy-nav .hidden-links a:hover {
+  background-color: #333;
+}
+
+/* Make the hamburger icon (3 lines) white */
+body.dark-theme .greedy-nav .nav-toggle {
+  background: transparent;
+}
+
+body.dark-theme .greedy-nav button {
+  color: white;
+}
