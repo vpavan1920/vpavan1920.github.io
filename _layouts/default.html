@@ -4,7 +4,8 @@
 <head>
   {% include head.html %}
   {% include head/custom.html %}
-<script type="application/ld+json">
+
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -18,90 +19,109 @@
         "https://orcid.org/0000-0001-8804-0338"
       ]
     }
-</script>
-<style>
-  div {
-    text-align: justify;
-    text-justify: inter-word;
-  }
-</style>
+  </script>
 
-<script>
-  {% raw %}
-  (function() {
-    const path = window.location.pathname;
-    const userAgent = navigator.userAgent;
-    const referrer = document.referrer || "Direct";
-
-    if (path.includes('{{') || /bot|googlebot|crawler/i.test(userAgent)) return;
-
-    function sendToSheets(data) {
-      fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
+  <style>
+    div {
+      text-align: justify;
+      text-justify: inter-word;
     }
+  </style>
 
-    // Check if we already have the IP for this session
-    const cachedIP = sessionStorage.getItem('visitor_ip');
-    const cachedGeo = sessionStorage.getItem('visitor_geo');
+  <script>
+    {% raw %}
+    (function() {
+      const path = window.location.pathname;
+      const userAgent = navigator.userAgent;
+      const referrer = document.referrer || "Direct";
 
-    if (cachedIP) {
-      // Use cached data to save API hits
-      sendToSheets({
-        ip: cachedIP,
-        country: cachedGeo || "Cached",
-        city: "Cached",
-        userAgent: userAgent,
-        referrer: referrer,
-        page: path
-      });
-    } else {
-      // No cache, fetch from API
-      fetch('https://ipapi.co/json/')
-        .then(res => res.json())
-        .then(data => {
-          sessionStorage.setItem('visitor_ip', data.ip);
-          sessionStorage.setItem('visitor_geo', data.country_name);
-          
-          sendToSheets({
-            ip: data.ip,
-            country: data.country_name,
-            city: data.city,
-            userAgent: userAgent,
-            referrer: referrer,
-            page: path
-          });
-        })
-        .catch(() => {
-          // Fallback if API is still blocked/limited
-          sendToSheets({
-            ip: "Limit Reached",
-            country: "Unknown",
-            city: "Unknown",
-            userAgent: userAgent,
-            referrer: referrer,
-            page: path
-          });
+      // 1. FILTERING: Ignore bots, local tests, and internal Jekyll files
+      const isInternal = path.includes('_includes') || path.includes('_sass') || path.includes('_layouts');
+      const isBroken = path.includes('{{') || path.includes('%7B');
+      const isBot = /bot|googlebot|crawler|spider|robot|crawling|headless/i.test(userAgent);
+      const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+      if (isInternal || isBroken || isBot || isLocal) {
+        return; // Exit silently
+      }
+
+      // 2. DATA SENDER: Function to push to Google Sheets
+      function logToGoogle(visitorData) {
+        fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(visitorData)
         });
-    }
-  })();
-  {% endraw %}
-</script>
+      }
 
+      // 3. CACHE CHECK: Don't waste API calls if we already have the IP for this session
+      const cachedIP = sessionStorage.getItem('v_ip');
+      const cachedCountry = sessionStorage.getItem('v_country');
+
+      if (cachedIP) {
+        logToGoogle({
+          ip: cachedIP,
+          country: cachedCountry || "Cached",
+          city: "Cached",
+          userAgent: userAgent,
+          referrer: referrer,
+          page: path
+        });
+      } else {
+        // 4. FETCH: Call API for new visitors
+        fetch('https://ipapi.co/json/')
+          .then(res => {
+            if (!res.ok) throw new Error();
+            return res.json();
+          })
+          .then(data => {
+            // Filter specific unwanted regions (like Anon Singapore)
+            if (data.country_code === "SG" && referrer === "Direct") return;
+
+            // Save to session so next page click is "free"
+            sessionStorage.setItem('v_ip', data.ip);
+            sessionStorage.setItem('v_country', data.country_name);
+
+            logToGoogle({
+              ip: data.ip,
+              country: data.country_name,
+              city: data.city,
+              userAgent: userAgent,
+              referrer: referrer,
+              page: path
+            });
+          })
+          .catch(() => {
+            // FALLBACK: If API is rate-limited, log the visit anyway without the IP
+            logToGoogle({
+              ip: "Limit Reached",
+              country: "Unknown",
+              city: "Unknown",
+              userAgent: userAgent,
+              referrer: referrer,
+              page: path
+            });
+          });
+      }
+    })();
+    {% endraw %}
+  </script>
 </head>
+
 <body>
   {% include browser-upgrade.html %}
   {% include masthead.html %}
+
   {{ content }}
-<div class="page__footer">
-<footer>
+
+  <div class="page__footer">
+    <footer>
       {% include footer/custom.html %}
       {% include footer.html %}
-</footer>
-</div>
+    </footer>
+  </div>
+
   {% include scripts.html %}
 </body>
 </html>
