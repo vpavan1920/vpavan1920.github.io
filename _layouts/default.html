@@ -39,7 +39,7 @@
     if (isBrokenPath || isBot) return;
 
     // 2. Fetch IP with Fallback
-    fetch('https://ipapi.co/json/')
+    fetch('https://api.ipify.org?format=json')
       .then(response => {
         if (!response.ok) throw new Error('Status ' + response.status); // Trigger catch if 429
         return response.json();
