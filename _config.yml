@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Pavan Laxmipathy Veluvali"
 title_separator          : "-"
 name                     : &name "Pavan Laxmipathy Veluvali"
-description              : &description "personal description"
+description: &description "Official website of Dr. V. Pavan Laxmipathy (Pavan Laxmipathy), a Computational Materials Scientist specializing in Phase-Field Modeling, Solidification, and Numerical Simulations at MPI Magdeburg."
 url                      : https://vpavan1920.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "vpavan1920/vpavan1920.github.io"
@@ -21,7 +21,7 @@ future                   : true
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               :  false (default) #, "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            :
   discourse:
@@ -247,7 +247,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Berlin # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
