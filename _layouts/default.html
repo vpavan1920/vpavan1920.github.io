@@ -1,3 +1,33 @@
+{% include base_path %}
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.author.name }}",
+      "alternateName": ["Pavan laxmipathy", "Pavan Laxmipathi", "Veluvali L. Pavan"],
+      "url": "{{ site.url }}",
+      "sameAs": [
+        "https://www.linkedin.com/in/dr-v-pavan-laxmipathy-408946b7/",
+        "https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=de",
+        "https://www.researchgate.net/profile/V-Pavan-Laxmipathy",
+        "https://orcid.org/0000-0001-8804-0338"
+      ]
+    }
+  </script>
+
+  <style>
+    div {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  </style>
+
 <script>
   {% raw %}
   (function() {
@@ -59,3 +89,21 @@
   })();
   {% endraw %}
 </script>
+</head>
+
+<body>
+  {% include browser-upgrade.html %}
+  {% include masthead.html %}
+
+  {{ content }}
+
+  <div class="page__footer">
+    <footer>
+      {% include footer/custom.html %}
+      {% include footer.html %}
+    </footer>
+  </div>
+
+  {% include scripts.html %}
+</body>
+</html>
