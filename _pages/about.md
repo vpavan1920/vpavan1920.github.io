@@ -26,9 +26,15 @@ and I am a member of [Prof. Dr. Peter Benner's](https://www.mpi-magdeburg.mpg.de
 [Computational Methods in Systems and Control Theory](https://www.mpi-magdeburg.mpg.de/csc). My work is dedicated to the 
 advancement of computational workflows, seamlessly integrating the domains of numerical mathematics and materials science. 
 
+<div style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
+  <a href="/portfolio/" class="btn btn--success" style="margin: 5px 10px;">View Research</a>
+  <a href="/publications/" class="btn btn--primary" style="margin: 5px 10px;">View Publications</a>
+  <a href="/talks/" class="btn btn--info" style="margin: 5px 10px;">Latest Talks</a>
+</div>
+
 | <br/><img src="/images/wordcloud_new6.png" width = "100%" height = "100%" style="border-style: none"/> | 
 |:--:| 
-| *Created using  wordclouds.com*
+| *Created using  wordclouds.com*|
 
 
 📢 News
