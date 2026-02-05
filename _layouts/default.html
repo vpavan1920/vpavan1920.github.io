@@ -37,18 +37,13 @@
     const userAgent = navigator.userAgent;
     const referrer = document.referrer || "Direct";
 
-    // 1. STRICT LOCALHOST & BOT FILTER
-    // This stops the script completely if you are on localhost or a bot
+    // 1. FILTERING
     const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
     const isInternal = path.includes('_includes') || path.includes('_sass') || path.includes('_layouts');
     const isBot = /bot|googlebot|crawler|spider|robot|crawling|headless/i.test(userAgent);
     
-    if (isLocal || isInternal || isBot) {
-      console.log("Tracking skipped: Localhost or Bot detected.");
-      return; 
-    }
+    if (isLocal || isInternal || isBot) return;
 
-    // 2. DATA SENDER
     function logToGoogle(visitorData) {
       fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
         method: 'POST',
@@ -58,39 +53,76 @@
       });
     }
 
-    // 3. DIRECT FETCH (Cache removed as requested)
-    fetch('https://ipapi.co/json/')
-      .then(res => {
-        if (!res.ok) throw new Error('API Limit');
-        return res.json();
-      })
-      .then(data => {
-        // Filter specific unwanted regions (like Anon Singapore)
-        if (data.country_code === "SG" && referrer === "Direct") return;
+    function runTracking() {
+      if (window.hasTracked) return;
+      window.hasTracked = true;
 
+      const cachedIP = sessionStorage.getItem('v_ip');
+      const cachedCountry = sessionStorage.getItem('v_country');
+      const cachedCity = sessionStorage.getItem('v_city');
+
+      if (cachedIP) {
+        // Use cached data
         logToGoogle({
-          ip: data.ip,
-          country: data.country_name,
-          city: data.city,
+          ip: cachedIP,
+          country: cachedCountry,
+          city: cachedCity,
           userAgent: userAgent,
           referrer: referrer,
           page: path
         });
-      })
-      .catch(() => {
-        // FALLBACK: If API is rate-limited, log the visit without the IP
-        logToGoogle({
-          ip: "API Limit Reached",
-          country: "Unknown",
-          city: "Unknown",
-          userAgent: userAgent,
-          referrer: referrer,
-          page: path
-        });
-      });
+      } else {
+        // Fetch from a CORS-friendly API
+        fetch('https://ipwhois.app/json/')
+          .then(res => res.json())
+          .then(data => {
+            // Optional: skip specific visitors
+            if (data.country_code === "SG" && referrer === "Direct") return;
+
+            // Cache in session
+            sessionStorage.setItem('v_ip', data.ip || 'Unknown');
+            sessionStorage.setItem('v_country', data.country || 'Unknown');
+            sessionStorage.setItem('v_city', data.city || 'Unknown');
+
+            logToGoogle({
+              ip: data.ip || 'Unknown',
+              country: data.country || 'Unknown',
+              city: data.city || 'Unknown',
+              userAgent: userAgent,
+              referrer: referrer,
+              page: path
+            });
+          })
+          .catch(err => {
+            // Still log failure, but more graceful
+            console.warn('IP fetch failed:', err);
+            logToGoogle({
+              ip: "Unknown",
+              country: "Unknown",
+              city: "Unknown",
+              userAgent: userAgent,
+              referrer: referrer,
+              page: path
+            });
+          });
+      }
+    }
+
+    // Trigger only on human interaction
+    const activityEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
+    function triggerListener() {
+      runTracking();
+      activityEvents.forEach(e => window.removeEventListener(e, triggerListener));
+    }
+    activityEvents.forEach(e => window.addEventListener(e, triggerListener, { passive: true }));
+
+    // Fallback after 5 seconds
+    setTimeout(runTracking, 5000);
+
   })();
   {% endraw %}
 </script>
+
 </head>
 
 <body>
