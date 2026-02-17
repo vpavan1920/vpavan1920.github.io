@@ -29,7 +29,6 @@
       text-justify: inter-word;
     }
   </style>
-
 <script>
   {% raw %}
   (function() {
@@ -40,8 +39,10 @@
     // 1. FILTERING
     const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
     const isInternal = path.includes('_includes') || path.includes('_sass') || path.includes('_layouts');
-    const isBot = /bot|googlebot|crawler|spider|robot|crawling|headless/i.test(userAgent);
-    
+    const isBot = /bot|googlebot|crawler|spider|robot|crawling|headless/i.test(userAgent)
+      || /Chrome\/(1[2-9]\d|[2-9]\d{2})/.test(userAgent)
+      || /Firefox\/(1[2-9]\d|[2-9]\d{2})/.test(userAgent);
+
     if (isLocal || isInternal || isBot) return;
 
     function logToGoogle(visitorData) {
@@ -62,7 +63,6 @@
       const cachedCity = sessionStorage.getItem('v_city');
 
       if (cachedIP) {
-        // Use cached data
         logToGoogle({
           ip: cachedIP,
           country: cachedCountry,
@@ -72,21 +72,24 @@
           page: path
         });
       } else {
-        // Fetch from a CORS-friendly API
-        fetch('https://ipwhois.app/json/')
-          .then(res => res.json())
+        fetch('https://ipapi.co/json/')
+          .then(res => {
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+          })
           .then(data => {
+            if (data.error) throw new Error(data.reason || 'API error');
+
             // Optional: skip specific visitors
             if (data.country_code === "SG" && referrer === "Direct") return;
 
-            // Cache in session
             sessionStorage.setItem('v_ip', data.ip || 'Unknown');
-            sessionStorage.setItem('v_country', data.country || 'Unknown');
+            sessionStorage.setItem('v_country', data.country_name || 'Unknown');
             sessionStorage.setItem('v_city', data.city || 'Unknown');
 
             logToGoogle({
               ip: data.ip || 'Unknown',
-              country: data.country || 'Unknown',
+              country: data.country_name || 'Unknown',
               city: data.city || 'Unknown',
               userAgent: userAgent,
               referrer: referrer,
@@ -94,12 +97,11 @@
             });
           })
           .catch(err => {
-            // Still log failure, but more graceful
-            console.warn('IP fetch failed:', err);
+            console.warn('IP fetch failed:', err.message);
             logToGoogle({
-              ip: "Unknown",
-              country: "Unknown",
-              city: "Unknown",
+              ip: 'Unknown - ' + err.message,
+              country: 'Unknown',
+              city: 'Unknown',
               userAgent: userAgent,
               referrer: referrer,
               page: path
@@ -122,7 +124,6 @@
   })();
   {% endraw %}
 </script>
-
 </head>
 
 <body>
