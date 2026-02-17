@@ -29,101 +29,94 @@
       text-justify: inter-word;
     }
   </style>
-<script>
-  {% raw %}
-  (function() {
-    const path = window.location.pathname;
-    const userAgent = navigator.userAgent;
-    const referrer = document.referrer || "Direct";
+ <script>
+(function() {
+  const path = window.location.pathname;
+  const userAgent = navigator.userAgent;
+  const referrer = document.referrer || "Direct";
 
-    // 1. FILTERING
-    const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
-    const isInternal = path.includes('_includes') || path.includes('_sass') || path.includes('_layouts');
-    const isBot = /bot|googlebot|crawler|spider|robot|crawling|headless/i.test(userAgent)
-      || /Chrome\/(1[2-9]\d|[2-9]\d{2})/.test(userAgent)
-      || /Firefox\/(1[2-9]\d|[2-9]\d{2})/.test(userAgent);
+  const isLocal =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1";
 
-    if (isLocal || isInternal || isBot) return;
+  const isInternal =
+    path.includes('_includes') ||
+    path.includes('_sass') ||
+    path.includes('_layouts');
 
-    function logToGoogle(visitorData) {
-      fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(visitorData)
-      });
-    }
+  const isBot =
+    /bot|googlebot|crawler|spider|robot|crawling|headless/i.test(userAgent);
 
-    function runTracking() {
-      if (window.hasTracked) return;
-      window.hasTracked = true;
+  if (isLocal || isInternal || isBot) return;
 
-      const cachedIP = sessionStorage.getItem('v_ip');
-      const cachedCountry = sessionStorage.getItem('v_country');
-      const cachedCity = sessionStorage.getItem('v_city');
+  function logToGoogle(visitorData) {
+    fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(visitorData)
+    });
+  }
 
-      if (cachedIP) {
+  function runTracking() {
+    if (window.hasTracked) return;
+    window.hasTracked = true;
+
+    fetch('https://ipapi.co/json/')
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+
+        // If lookup succeeded
+        if (data && !data.error && data.ip) {
+          logToGoogle({
+            ip: data.ip,
+            country: data.country_name || "Unknown",
+            city: data.city || "Unknown",
+            userAgent: userAgent,
+            referrer: referrer,
+            page: path
+          });
+        } 
+        // If lookup failed
+        else {
+          logToGoogle({
+            ip: "Lookup Failed",
+            country: "Lookup Failed",
+            city: "Lookup Failed",
+            userAgent: userAgent,
+            referrer: referrer,
+            page: path
+          });
+        }
+      })
+      .catch(() => {
         logToGoogle({
-          ip: cachedIP,
-          country: cachedCountry,
-          city: cachedCity,
+          ip: "Blocked",
+          country: "Blocked",
+          city: "Blocked",
           userAgent: userAgent,
           referrer: referrer,
           page: path
         });
-      } else {
-        fetch('https://ipapi.co/json/')
-          .then(res => {
-            if (!res.ok) throw new Error('HTTP ' + res.status);
-            return res.json();
-          })
-          .then(data => {
-            if (data.error) throw new Error(data.reason || 'API error');
+      });
+  }
 
-            // Optional: skip specific visitors
-            if (data.country_code === "SG" && referrer === "Direct") return;
+  const activityEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
 
-            sessionStorage.setItem('v_ip', data.ip || 'Unknown');
-            sessionStorage.setItem('v_country', data.country_name || 'Unknown');
-            sessionStorage.setItem('v_city', data.city || 'Unknown');
+  function triggerListener() {
+    runTracking();
+    activityEvents.forEach(e => window.removeEventListener(e, triggerListener));
+  }
 
-            logToGoogle({
-              ip: data.ip || 'Unknown',
-              country: data.country_name || 'Unknown',
-              city: data.city || 'Unknown',
-              userAgent: userAgent,
-              referrer: referrer,
-              page: path
-            });
-          })
-          .catch(err => {
-            console.warn('IP fetch failed:', err.message);
-            logToGoogle({
-              ip: 'Unknown - ' + err.message,
-              country: 'Unknown',
-              city: 'Unknown',
-              userAgent: userAgent,
-              referrer: referrer,
-              page: path
-            });
-          });
-      }
-    }
+  activityEvents.forEach(e =>
+    window.addEventListener(e, triggerListener, { passive: true })
+  );
 
-    // Trigger only on human interaction
-    const activityEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
-    function triggerListener() {
-      runTracking();
-      activityEvents.forEach(e => window.removeEventListener(e, triggerListener));
-    }
-    activityEvents.forEach(e => window.addEventListener(e, triggerListener, { passive: true }));
+  setTimeout(runTracking, 5000);
 
-    // Fallback after 5 seconds
-    setTimeout(runTracking, 5000);
-
-  })();
-  {% endraw %}
+})();
 </script>
+
 </head>
 
 <body>
