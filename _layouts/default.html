@@ -21,15 +21,7 @@
     "jobTitle": "Computational Materials Scientist",
     "affiliation": "Max Planck Institute for Dynamics of Complex Technical Systems"
   }
-  </script>
-
-  <style>
-    div {
-      text-align: justify;
-      text-justify: inter-word;
-    }
-  </style>
- <script>
+<script>
 (function() {
   const path = window.location.pathname;
   const userAgent = navigator.userAgent;
@@ -44,10 +36,13 @@
     path.includes('_sass') ||
     path.includes('_layouts');
 
-  const isBot =
-    /bot|googlebot|crawler|spider|robot|crawling|headless/i.test(userAgent);
+  // --- Advanced Bot Detection ---
+  const uaBotPattern = /bot|googlebot|crawler|spider|robot|crawling|headless|scrapy|curl|wget/i.test(userAgent);
+  const isHeadless = navigator.webdriver === true;
+  const noPlugins = navigator.plugins.length === 0;
+  const noLanguages = !navigator.languages || navigator.languages.length === 0;
 
-  if (isLocal || isInternal || isBot) return;
+  if (isLocal || isInternal || uaBotPattern || isHeadless || noLanguages) return;
 
   function logToGoogle(visitorData) {
     fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
@@ -58,15 +53,25 @@
     });
   }
 
+  let interacted = false;
+
+  const interactionEvents = ['mousedown', 'keydown', 'touchstart'];
+
+  interactionEvents.forEach(event =>
+    window.addEventListener(event, () => {
+      interacted = true;
+      runTracking();
+    }, { once: true, passive: true })
+  );
+
   function runTracking() {
-    if (window.hasTracked) return;
+    if (window.hasTracked || !interacted) return;
     window.hasTracked = true;
 
     fetch('https://ipapi.co/json/')
       .then(res => res.ok ? res.json() : null)
       .then(data => {
 
-        // If lookup succeeded
         if (data && !data.error && data.ip) {
           logToGoogle({
             ip: data.ip,
@@ -76,13 +81,11 @@
             referrer: referrer,
             page: path
           });
-        } 
-        // If lookup failed
-        else {
+        } else {
           logToGoogle({
-            ip: "Lookup Failed",
-            country: "Lookup Failed",
-            city: "Lookup Failed",
+            ip: "Geo Failed",
+            country: "Geo Failed",
+            city: "Geo Failed",
             userAgent: userAgent,
             referrer: referrer,
             page: path
@@ -101,21 +104,9 @@
       });
   }
 
-  const activityEvents = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
-
-  function triggerListener() {
-    runTracking();
-    activityEvents.forEach(e => window.removeEventListener(e, triggerListener));
-  }
-
-  activityEvents.forEach(e =>
-    window.addEventListener(e, triggerListener, { passive: true })
-  );
-
-  setTimeout(runTracking, 5000);
-
 })();
 </script>
+
 
 </head>
 
