@@ -4,8 +4,7 @@
 <head>
   {% include head.html %}
   {% include head/custom.html %}
-
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -21,15 +20,14 @@
     "jobTitle": "Computational Materials Scientist",
     "affiliation": "Max Planck Institute for Dynamics of Complex Technical Systems"
   }
-  </script>
-
-  <style>
-    div {
-      text-align: justify;
-      text-justify: inter-word;
-    }
-  </style>
- <script>
+</script>
+<style>
+div {
+  text-align: justify;
+  text-justify: inter-word;
+}
+</style>
+<script>
 (function() {
   const path = window.location.pathname;
   const userAgent = navigator.userAgent;
@@ -49,6 +47,33 @@
 
   if (isLocal || isInternal || isBot) return;
 
+  // Known bot/crawler IP prefixes (Tencent Cloud crawler subnet)
+  const BOT_IP_PREFIXES = [
+    '43.173.'
+  ];
+
+  function isBotIP(ip) {
+    return BOT_IP_PREFIXES.some(prefix => ip.startsWith(prefix));
+  }
+
+  // Known bot/crawler ASNs / orgs
+  const BOT_ORGS = [
+    'tencent',
+    'alibaba',
+    'amazonaws',
+    'googlebot',
+    'baiduspider',
+    'censys',
+    'shodan',
+    'shadowserver'
+  ];
+
+  function isBotOrg(org) {
+    if (!org) return false;
+    const lower = org.toLowerCase();
+    return BOT_ORGS.some(name => lower.includes(name));
+  }
+
   function logToGoogle(visitorData) {
     fetch('https://script.google.com/macros/s/AKfycbxmocg5FiFwS9LYsXNMQuBzRHM1iHgqYBigmyQ3uaI3JpVrIAo2KdlddGvUzoWa1WN_/exec', {
       method: 'POST',
@@ -65,9 +90,11 @@
     fetch('https://ipapi.co/json/')
       .then(res => res.ok ? res.json() : null)
       .then(data => {
-
-        // If lookup succeeded
         if (data && !data.error && data.ip) {
+
+          // --- Bot IP / Org filter: silently drop, do not log ---
+          if (isBotIP(data.ip) || isBotOrg(data.org)) return;
+
           logToGoogle({
             ip: data.ip,
             country: data.country_name || "Unknown",
@@ -76,9 +103,8 @@
             referrer: referrer,
             page: path
           });
-        } 
-        // If lookup failed
-        else {
+
+        } else {
           logToGoogle({
             ip: "Lookup Failed",
             country: "Lookup Failed",
@@ -113,25 +139,19 @@
   );
 
   setTimeout(runTracking, 5000);
-
 })();
 </script>
-
 </head>
-
 <body>
   {% include browser-upgrade.html %}
   {% include masthead.html %}
-
   {{ content }}
-
   <div class="page__footer">
     <footer>
       {% include footer/custom.html %}
       {% include footer.html %}
     </footer>
   </div>
-
   {% include scripts.html %}
 </body>
 </html>
