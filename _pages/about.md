@@ -39,8 +39,9 @@ advancement of computational workflows, seamlessly integrating the domains of nu
 
 📢 News
 ==========
+*   **[Mar 2026]** Poster Alert!! Our latest contribution on workflows and ontologies [![https://doi.org/10.5281/zenodo.18847248](https://zenodo.org/badge/DOI/10.5281/zenodo.18847248.svg)](https://doi.org/10.5281/zenodo.18847248)
+
 *   **[Aug 2025]** Pleased to announce our latest contribution for [CoRDI](https://doi.org/10.5281/zenodo.16735880). Dive into our findings on bridging ontologies and computational workflows!
 
 *   **[Mar 2025]** New full-length research paper published in [Journal of Applied Physics](https://doi.org/10.1063/5.0260488). Happy to share our latest findings on grain boundary grooving and the role of interfacial surface anisotropy. 
 
-*   **[Oct 2024]** Scientific Computing - I (WiSe 24/25) course at [Otto-von-Guericke-Universität Magdeburg](https://www.ovgu.de/), see [Teaching](https://vpavan1920.github.io/teaching) for more details

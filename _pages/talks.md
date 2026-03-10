@@ -1,12 +1,15 @@
 ---
 layout: archive
-title: "Contributed/Invited Talks and Posters at Conferences/Workshops"
+title: "Selected Contributed/Invited Talks and Posters at Conferences/Workshops"
 permalink: /talks/
 author_profile: true
 header-includes: \usepackage{xcolor}
 keywords: "phase-field models, computational materials science, solidification microstructures"
 
 ---
+## 2026
+*   *Oral presentation* at the <a href="https://events.geomar.de/event/884/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;"> Helmholtz Metadata Collaboration (HMC) Conference: Metadata in Action</a>, Heidelberg, Germany, April 2026.
+*   *Poster presentation* at the <a href="https://events.hifis.net/event/2945/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;"> Conference  for Research Software Engineering (deRSE26)</a>, Stuttgart, Germany, March 2026.
 
 ## 2025
 *   *Oral presentation* at the <a href="https://www.nfdi.de/cordi-2025/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">Conference on Research Data Infrastructure (CoRDI 2025)</a>, Aachen, Germany, August 2025.

@@ -6,11 +6,8 @@ author_profile: true
 keywords: "phase-field models, computational materials science, solidification microstructures"
 ---
 
-[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4.svg?style=for-the-badge&logo=Google-Scholar&logoColor=white)](https://scholar.google.de/citations?user=O6uqB1AAAAAJ&hl=en)
-
-## Under Review and in Preparation
-
-
+                                             
+## Under Review and in Preparation       
 
 * *V. Pavan Laxmipathy et al.*, **Effect of melt convection on the morphological evolution of polycrystalline thin films: Insights from three-dimensional phase-field simulations**. 
 <span style="color: #800000">(in review)</span>
@@ -18,21 +15,26 @@ keywords: "phase-field models, computational materials science, solidification m
 
 ## Accepted & Published 
 
+* *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **Enhancing Reproducibility in Computational Workflows : Linking Semantics, Metadata, and Ontologies** | Poster in 
+<span style="color: #800000"> deRSE Conference</span>, 2026.\
+[![https://doi.org/10.5281/zenodo.18847248](https://zenodo.org/badge/DOI/10.5281/zenodo.18847248.svg)](https://doi.org/10.5281/zenodo.18847248)
+
+
 * *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **Bridging Ontologies and Computational Workflows: A Framework for Semantic Enrichment and Reproducibility** | in 
 <span style="color: #800000"> the Conference on Research Data Infrastructure</span>, 2025.
-[![https://doi.org/10.5281/zenodo.16735880](https://zenodo.org/badge/DOI/*  10.5281/zenodo.16735880.svg)](https://doi.org/10.5281/zenodo.16735880)
+[![https://doi.org/10.5281/zenodo.16735880](https://zenodo.org/badge/DOI/10.5281/zenodo.16735880.svg)](https://doi.org/10.5281/zenodo.16735880)
 
 
 * *M. Umar, V. Pavan Laxmipathy, B. Nestler et al.*, **Role of interfacial surface anisotropy on liquid grooving at grain boundaries: A phase-field study** | in
 <span style="color: #800000">Journal of Applied Physics</span>, 2025.  
-[![doi.org/10.1016/j.actamat.2020.116497](https://zenodo.org/badge/DOI/doi.org/10.1063/5.0260488.svg)](https://doi.org/10.1063/5.0260488)
-
+[![AIP DOI](https://img.shields.io/badge/AIP%20Publishing-10.1063%2F5.0260488-blue)](https://doi.org/10.1063/5.0260488)
+ 
 *  *Pavan L. Veluvali, Jan Heiland, Peter Benner*, **MaRDIFlow: A CSE workflow framework for abstracting meta-data from FAIR computational experiments** | in 
 <span style="color: #800000">arXiv</span>, 2024.\
 [![arxiv.org/abs/2405.00028](https://zenodo.org/badge/DOI/arxiv.org/abs/2405.00028.svg)](https://arxiv.org/abs/2405.00028)
 
 *  *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **MaRDIFlow: A Workflow Framework for Documentation and Integration of FAIR Computational Experiments** | in 
-<span style="color: #800000">Proceedings of the Conference on Research Data Infrastructure</span>, 2023.
+<span style="color: #800000">Proceedings of the Conference on Research Data Infrastructure</span>, 2023.\
 [![doi.org/10.52825/cordi.v1i.323](https://zenodo.org/badge/DOI/10.52825/cordi.v1i.323.svg)](https://doi.org/10.52825/cordi.v1i.323)
 
 * *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **Phase-field simulations of grain boundary grooving under diffusive-convective conditions** | in 
