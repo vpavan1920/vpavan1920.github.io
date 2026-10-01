@@ -6,72 +6,56 @@ author_profile: true
 keywords: "phase-field models, computational materials science, solidification microstructures"
 ---
 
-                                             
-## Under Review and in Preparation       
+## Under Review and in Preparation
 
-* *V. Pavan Laxmipathy et al.*, **Effect of melt convection on the morphological evolution of polycrystalline thin films: Insights from three-dimensional phase-field simulations**. 
-<span style="color: #800000">(in review)</span>
+* *V. Pavan Laxmipathy et al.*, **Effect of melt convection on the morphological evolution of polycrystalline thin films: Insights from three-dimensional phase-field simulations**. <span style="color: #800000">(in review)</span>
 
+## Accepted & Published
 
-## Accepted & Published 
+* *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **Enhancing Reproducibility in Computational Workflows : Linking Semantics, Metadata, and Ontologies** | Poster in <span style="color: #800000">deRSE Conference</span>, 2026.\
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18847248-blue)](https://doi.org/10.5281/zenodo.18847248)
 
-* *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **Enhancing Reproducibility in Computational Workflows : Linking Semantics, Metadata, and Ontologies** | Poster in 
-<span style="color: #800000"> deRSE Conference</span>, 2026.\
-[![https://doi.org/10.5281/zenodo.18847248](https://zenodo.org/badge/DOI/10.5281/zenodo.18847248.svg)](https://doi.org/10.5281/zenodo.18847248)
+* *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **Bridging Ontologies and Computational Workflows: A Framework for Semantic Enrichment and Reproducibility** | in <span style="color: #800000">the Conference on Research Data Infrastructure</span>, 2025.\
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.16735880-blue)](https://doi.org/10.5281/zenodo.16735880)
 
-
-* *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **Bridging Ontologies and Computational Workflows: A Framework for Semantic Enrichment and Reproducibility** | in 
-<span style="color: #800000"> the Conference on Research Data Infrastructure</span>, 2025.
-[![https://doi.org/10.5281/zenodo.16735880](https://zenodo.org/badge/DOI/10.5281/zenodo.16735880.svg)](https://doi.org/10.5281/zenodo.16735880)
-
-
-* *M. Umar, V. Pavan Laxmipathy, B. Nestler et al.*, **Role of interfacial surface anisotropy on liquid grooving at grain boundaries: A phase-field study** | in
-<span style="color: #800000">Journal of Applied Physics</span>, 2025.  
+* *M. Umar, V. Pavan Laxmipathy, B. Nestler et al.*, **Role of interfacial surface anisotropy on liquid grooving at grain boundaries: A phase-field study** | in <span style="color: #800000">Journal of Applied Physics</span>, 2025.\
 [![AIP DOI](https://img.shields.io/badge/AIP%20Publishing-10.1063%2F5.0260488-blue)](https://doi.org/10.1063/5.0260488)
- 
-*  *Pavan L. Veluvali, Jan Heiland, Peter Benner*, **MaRDIFlow: A CSE workflow framework for abstracting meta-data from FAIR computational experiments** | in 
-<span style="color: #800000">arXiv</span>, 2024.\
-[![arxiv.org/abs/2405.00028](https://zenodo.org/badge/DOI/arxiv.org/abs/2405.00028.svg)](https://arxiv.org/abs/2405.00028)
 
-*  *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **MaRDIFlow: A Workflow Framework for Documentation and Integration of FAIR Computational Experiments** | in 
-<span style="color: #800000">Proceedings of the Conference on Research Data Infrastructure</span>, 2023.\
-[![doi.org/10.52825/cordi.v1i.323](https://zenodo.org/badge/DOI/10.52825/cordi.v1i.323.svg)](https://doi.org/10.52825/cordi.v1i.323)
+* *Pavan L. Veluvali, Jan Heiland, Peter Benner*, **MaRDIFlow: A CSE workflow framework for abstracting meta-data from FAIR computational experiments** | in <span style="color: #800000">arXiv</span>, 2024.\
+[![arXiv](https://img.shields.io/badge/arXiv-2405.00028-b31b1b)](https://arxiv.org/abs/2405.00028)
 
-* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **Phase-field simulations of grain boundary grooving under diffusive-convective conditions** | in 
-<span style="color: #800000">Acta Materialia</span>, 2021.\
-[![doi.org/10.1016/j.actamat.2020.116497](https://zenodo.org/badge/DOI/10.1016/j.actamat.2020.116497.svg)](https://doi.org/10.1016/j.actamat.2020.116497)
+* *Pavan L. Veluvali, Jan Heiland, Peter Benner*. **MaRDIFlow: A Workflow Framework for Documentation and Integration of FAIR Computational Experiments** | in <span style="color: #800000">Proceedings of the Conference on Research Data Infrastructure</span>, 2023.\
+[![DOI](https://img.shields.io/badge/DOI-10.52825%2Fcordi.v1i.323-blue)](https://doi.org/10.52825/cordi.v1i.323)
 
-* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **A two-dimensional phase-field study on dendritic growth competition under convective conditions** | in 
-<span style="color: #800000">Computational Materials Science</span>, 2021.\
-[![doi.org/10.1016/j.commatsci.2020.109964](https://zenodo.org/badge/DOI/10.1016/j.commatsci.2020.109964.svg)](https://doi.org/10.1016/j.commatsci.2020.109964)
+* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **A two-dimensional phase-field investigation on tip splitting microstructures** | in <span style="color: #800000">Metals, MDPI Journal</span>, 2022.\
+[![DOI](https://img.shields.io/badge/DOI-10.3390%2Fmet12030376-blue)](https://doi.org/10.3390/met12030376)
 
-* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **A two-dimensional phase-field investigation on tip splitting microstructures** | in 
-<span style="color: #800000">Metals, MDPI Journal</span>, 2022.\
-[![doi.org/10.3390/met12030376](https://zenodo.org/badge/DOI/10.3390/met12030376.svg)](https://doi.org/10.3390/met12030376)
+* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **Phase-field simulations of grain boundary grooving under diffusive-convective conditions** | in <span style="color: #800000">Acta Materialia</span>, 2021.\
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.actamat.2020.116497-blue)](https://doi.org/10.1016/j.actamat.2020.116497)
 
-* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **Microstructural transition in monotectic alloys: A phase-field study** | in 
-<span style="color: #800000">International Journal of Heat and Mass Transfer</span>, 2020.\
-[![doi.org/10.1016/j.ijheatmasstransfer.2020.120096](https://zenodo.org/badge/DOI/10.1016/j.ijheatmasstransfer.2020.120096.svg)](https://doi.org/10.1016/j.ijheatmasstransfer.2020.120096)
+* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **A two-dimensional phase-field study on dendritic growth competition under convective conditions** | in <span style="color: #800000">Computational Materials Science</span>, 2021.\
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.commatsci.2020.109964-blue)](https://doi.org/10.1016/j.commatsci.2020.109964)
 
-* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, Britta Nestler, and Kumar Ankit*. **Influence of melt convection on the morphological evolution of seaweed structures: Insights from phase-field simulations** | in 
-<span style="color: #800000">Computational Materials Science</span>, 2019.\
-[![https://doi.org/10.1016/j.commatsci.2019.109196](https://zenodo.org/badge/DOI/10.1016/j.commatsci.2019.109196.svg)](https://doi.org/10.1016/j.commatsci.2019.109196)
+* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, and Britta Nestler*. **Microstructural transition in monotectic alloys: A phase-field study** | in <span style="color: #800000">International Journal of Heat and Mass Transfer</span>, 2020.\
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ijheatmasstransfer.2020.120096-blue)](https://doi.org/10.1016/j.ijheatmasstransfer.2020.120096)
 
-* *M.B.-Fabregat, I. Jubany, F. Travesa, P. Centrich, R. Centrich, E. J. Alesi, M. Esslinger, M. Alesi, G. Rehner, A. Kneer, A. A. Gonzalez, V. Pavan Laxmipathy, P. Altschuh, E. Alesi, B. Nestler*, **Groundwater Circulation Well Technology for Enhanced Natural Attenuation of TCE and PCE**. <span style="color: #800000">7th European Bioremediation Conference & 11th ISEB Conference, Chania, Greece</span>, 2018. \
-[![Generic badge](https://img.shields.io/badge/Download-Here-brightgreen.svg)](https://www.hidronit.com/img/Abstract_Microbiome_ebc-vii-iseb2018.pdf
-)
+* *V. Pavan Laxmipathy, Fei Wang, Michael Selzer, Britta Nestler, and Kumar Ankit*. **Influence of melt convection on the morphological evolution of seaweed structures: Insights from phase-field simulations** | in <span style="color: #800000">Computational Materials Science</span>, 2019.\
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.commatsci.2019.109196-blue)](https://doi.org/10.1016/j.commatsci.2019.109196)
 
-* *A. Kneer, A. A. Gonzalez, V. Pavan Laxmipathy, P. Altschuh, E. Alesi, B. Nestler*. **Groundwater remediation - numerical models and experiments** | in 
-<span style="color: #800000">Hochschule Karlsruhe: Forschung Aktuell,  pp. 59-63</span>, 2018.\
-[![Generic badge](https://img.shields.io/badge/Download-Here-brightgreen.svg)](https://www.h-ka.de/fileadmin/Hochschule_Karlsruhe_HKA/Bilder_VW-PK/Publikationen/Forschungsbericht/HKA_ZH_Forschung_aktuell_2018.pdf)
+* *M. B.-Fabregat, I. Jubany, F. Travesa, P. Centrich, R. Centrich, E. J. Alesi, M. Esslinger, M. Alesi, G. Rehner, A. Kneer, A. A. Gonzalez, V. Pavan Laxmipathy, P. Altschuh, E. Alesi, B. Nestler*, **Groundwater Circulation Well Technology for Enhanced Natural Attenuation of TCE and PCE**. <span style="color: #800000">7th European Bioremediation Conference & 11th ISEB Conference, Chania, Greece</span>, 2018.\
+[![Download](https://img.shields.io/badge/Download-Here-brightgreen.svg)](https://www.hidronit.com/img/Abstract_Microbiome_ebc-vii-iseb2018.pdf)
+
+* *A. Kneer, A. A. Gonzalez, V. Pavan Laxmipathy, P. Altschuh, E. Alesi, B. Nestler*. **Groundwater remediation - numerical models and experiments** | in <span style="color: #800000">Hochschule Karlsruhe: Forschung Aktuell, pp. 59-63</span>, 2018.\
+[![Download](https://img.shields.io/badge/Download-Here-brightgreen.svg)](https://www.h-ka.de/fileadmin/Hochschule_Karlsruhe_HKA/Bilder_VW-PK/Publikationen/Forschungsbericht/HKA_ZH_Forschung_aktuell_2018.pdf)
 
 ## PhD thesis
+
 * [Phase-field modeling of unidirectionally solidified microstructures under diffusive-convective regime](https://publikationen.bibliothek.kit.edu/1000134624)
 
-<p style="display: inline-block; margin-right: 10px;"><img src='/images/acta_cover.jpg' width="140" height="100"></p>
-<p style="display: inline-block; margin-right: 10px;"><img src='/images/jap_cover.jpg' width="144" height="100"></p>
-<p style="display: inline-block; margin-right: 10px;"><img src='/images/commat_cover.jpg' width="140" height="100"></p>
-<p style="display: inline-block; margin-right: 10px;"><img src='/images/hmt_cover.jpg' width="140" height="100"></p>
-<p style="display: inline-block; margin-right: 10px;"><img src='/images/cover-metals.webp' width="130" height="100"></p>
-<!-- <p style="display: inline-block; margin-right: 10px;"><img src='/images/preprint_cover.jpg' width="133" height="100"></p> -->
-<p style="display: inline-block; margin-right: 10px;"><img src='/images/cover_tib.png' width="133" height="100"></p>
+<p style="display: inline-block; margin-right: 10px;"><img src="/images/acta_cover.jpg" width="140" height="100" alt="Acta Materialia cover"></p>
+<p style="display: inline-block; margin-right: 10px;"><img src="/images/jap_cover.jpg" width="144" height="100" alt="Journal of Applied Physics cover"></p>
+<p style="display: inline-block; margin-right: 10px;"><img src="/images/commat_cover.jpg" width="140" height="100" alt="Computational Materials Science cover"></p>
+<p style="display: inline-block; margin-right: 10px;"><img src="/images/hmt_cover.jpg" width="140" height="100" alt="International Journal of Heat and Mass Transfer cover"></p>
+<p style="display: inline-block; margin-right: 10px;"><img src="/images/cover-metals.webp" width="130" height="100" alt="Metals cover"></p>
+<!-- <p style="display: inline-block; margin-right: 10px;"><img src="/images/preprint_cover.jpg" width="133" height="100" alt="Preprint cover"></p> -->
+<p style="display: inline-block; margin-right: 10px;"><img src="/images/cover_tib.png" width="133" height="100" alt="TIB cover"></p>

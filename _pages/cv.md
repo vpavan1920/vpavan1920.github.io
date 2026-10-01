@@ -21,15 +21,15 @@ Education
 
 Work experience
 ======  
-* Since May 2022: *Postdoctoral researcher*
+* Since May 2022: *Postdoctoral Researcher*
   * Max Planck Institute for Dynamics of Complex Technical Systems,\
     Magdeburg, Germany
  
-* Jan 2021 - Mar 2022: *Postdoctoral researcher* 
+* Jan 2021 - Mar 2022: *Postdoctoral Researcher* 
   * Karlsruhe Institute of Technology,\
     Karlsruhe, Germany
   
-* May 2016 - Jan 2021: *Doctoral researcher* 
+* May 2016 - Jan 2021: *Doctoral Researcher* 
   * Karlsruhe Institute of Technology,\
     Karlsruhe, Germany
 
@@ -39,5 +39,5 @@ Voluntary experience
   * Journal of Applied Physics
   * Journal of Phase Equilibira 
   * Journal of Physics: Condensed Matter 
+  * AIP: Physics of Fluids
   * ...
-

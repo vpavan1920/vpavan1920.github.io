@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Selected Contributed/Invited Talks and Posters at Conferences/Workshops"
+title: "Selected Contributed/Invited Talks and Posters"
 permalink: /talks/
 author_profile: true
 header-includes: \usepackage{xcolor}
@@ -8,6 +8,9 @@ keywords: "phase-field models, computational materials science, solidification m
 
 ---
 ## 2026
+* *Oral presentation* at the <a href="https://nfdi4chem.de/event/5th-ontologies4chem-workshop/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;"> 5th Ontologies4Chem Workshop </a>, Limburg an der Lahn, Germany, November 2026.
+* *Oral presentation* at the <a href="https://www.dmv-jahrestagung.de/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;"> German Mathematicians Association (DMV) Annual Meeting </a>, Konstanz, Germany, September 2026.
+* *Invited talk* at the <a href="https://www.bam-akademie.de/kursangebot/kurs/von-virtuellen-laboren-zu-digitalen-zwillingen-vertrauen-schaffen-durch-verifikation-%26-validierung-70.html?lang=en" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;">Bundesanstalt für Materialforschung und -prüfung (BAM)</a>, Berlin, Germany, June 2026. 
 *   *Oral presentation* at the <a href="https://events.geomar.de/event/884/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;"> Helmholtz Metadata Collaboration (HMC) Conference: Metadata in Action</a>, Heidelberg, Germany, April 2026.
 *   *Poster presentation* at the <a href="https://events.hifis.net/event/2945/" style="color: #800000; text-decoration: underline;text-decoration-style: dotted;"> Conference  for Research Software Engineering (deRSE26)</a>, Stuttgart, Germany, March 2026.
 
